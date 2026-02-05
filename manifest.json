@@ -1,0 +1,21 @@
+{
+  "short_name": "Kwetu Furnit",
+  "name": "Kwetu Furniture",
+  "description": "Kwetu Furniture crée un artisanat moderne aux couleurs chaudes, offrant une ambiance accueillante et stylée. Découvrez des pièces uniques qui transformeront votre intérieur avec passion et perfection. Contactez-nous à kwetufurniture72@gmail.com pour un espace qui vous ressemble.",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "background_color": "#F8F4EA",
+  "theme_color": "#C25B44",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192x192.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/icons/icon-512x512.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ]
+}

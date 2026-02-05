@@ -1,0 +1,749 @@
+<!-- =================================================================================================
+//  TEMPLATE : shell.njk - V6.2.1 (CLEANUP)
+// ================================================================================================= -->
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <!-- =================================================================================================
+// TEMPLATE : _head.njk - V8.0 (DATA ISLAND)
+// ================================================================================================= -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- === SECTION 1 : SEO === -->
+<title>Kwetu Furniture de démonstration 1 - Kwetu Furniture</title>
+<meta name="description" content="Kwetu Furniture crée un artisanat moderne aux couleurs chaudes, offrant une ambiance accueillante et stylée. Découvrez des pièces uniques qui transformeront vot" />
+<link rel="canonical" href="/products/kwetu-furniture-de-dmonstration-1/" />
+<link rel="icon" href="/favicon.svg" />
+
+<!-- === SECTION 2 : OPEN GRAPH === -->
+<meta property="og:title" content="Kwetu Furniture de démonstration 1 - Kwetu Furniture" />
+<meta property="og:description" content="Kwetu Furniture crée un artisanat moderne aux couleurs chaudes, offrant une ambiance accueillante et stylée. Découvrez des pièces uniques qui transformeront vot" />
+<meta property="og:type" content="product" />
+<meta property="og:url" content="/products/kwetu-furniture-de-dmonstration-1/" />
+<meta
+  property="og:image"
+  content="https://placehold.co/800x600?text=Kwetu%20Furniture%20de%20d%C3%A9monstration%201"
+/>
+<meta property="og:site_name" content="Kwetu Furniture" />
+
+<link rel="manifest" href="/manifest.json" />
+<link rel="stylesheet" href="/assets/app-BbtVduvI.css" />
+
+<!-- === SECTION 4 : SCRIPTS & INJECTIONS === -->
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-functions-compat.js"></script>
+ 
+<script id="firebase-config-data" type="application/json">
+  {
+    "apiKey": "AIzaSyDBXhXyRBnSJsVn0CmZ35MQp-zT_e9RakQ",
+    "authDomain": "zflex-wizard.firebaseapp.com",
+    "projectId": "zflex-wizard"
+  }
+</script>
+
+<!-- === SECTION 5 : THÈME (VARIABLES CSS) === -->
+<style id="zflex-theme-vars">
+  :root {
+    
+    
+      /* base variables (store palette -> computedPalette -> fallback) */
+      --bg-color: #F8F4EA;
+      --text-color: #332B25;
+      --primary-color: #C25B44;
+      --secondary-color: #8B4513;
+      --accent-color: #DAA520;
+      --card-bg-color: #F0E6D2;
+
+      /* derived / advanced (fall back to computedPalette if available, else sensible default) */
+      --text-muted-color: #9CA3AF;
+      --card-border-color: #E5E7EB;
+      --input-bg-color: #F3F4F6;
+      --chat-response-bg-color: #F9FAFB;
+
+      /* utility / tonal */
+      --primary-600: #000000;
+      --primary-700: #000000;
+      --secondary-600: #6B7280;
+
+    
+
+    /* font family (fallback) */
+    --font-family: &quot;Inter&quot;, sans-serif;
+  }
+</style>
+
+  </head>
+  <body
+    class="antialiased flex flex-col min-h-screen "
+  >
+    <div
+      id="router-loader"
+      class="fixed inset-0 z-[200] flex items-center justify-center bg-black/20 backdrop-blur-sm hidden"
+    >
+      <!-- =================================================================================================
+// PARTIEL : _loader.njk - LA SIGNATURE Z-FLEX
+// ================================================================================================= -->
+<div class="loader">
+  
+  <div class="face" style="color: var(--primary-color);">
+    <div class="circle"></div>
+  </div>
+  <div class="face" style="color: var(--secondary-color);">
+    <div class="circle"></div>
+  </div>
+</div>
+    </div>
+    <!-- =================================================================================================
+// PARTIEL : _header.njk - Crystal Vandal Upgrade
+// Support complet des variantes 'default', 'centered', 'transparent'.
+// ================================================================================================= -->
+
+   
+ 
+
+<header
+  id="site-header"
+  class="z-50
+transition-all duration-300 w-full fixed top-0 left-0 right-0
+bg-transparent text-white"
+  data-variant="transparent"
+  style=""
+>
+  <div data-zflex-variant-container="header">
+    <nav class="w-full px-6 py-4">
+      <div class="container mx-auto">
+        
+        <div class="flex items-center justify-between">
+          
+          <div class="flex-shrink-0 flex items-center">
+            <a
+              href="/"
+              class="zflex-link text-2xl font-bold tracking-tighter"
+              style="color: var(--text-color)"
+            >
+              
+              Kwetu Furniture
+              
+            </a>
+          </div>
+
+          
+          <div class="hidden md:flex items-center space-x-10">
+            
+          </div>
+
+          
+          <div class="flex items-center space-x-6">
+            <button
+              class="p-2 hover:bg-black/5 rounded-full transition"
+              aria-label="Recherche"
+            >
+              <i
+                class="fas fa-search text-lg"
+                style="color: var(--text-color)"
+              ></i>
+            </button>
+            <a
+              href="/cart/"
+              class="relative p-2 hover:bg-black/5 rounded-full transition"
+              aria-label="Panier"
+            >
+              <i
+                class="fas fa-shopping-bag text-lg"
+                style="color: var(--text-color)"
+              ></i>
+              <span
+                id="cart-count"
+                class="absolute top-0 right-0 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold"
+                style="background-color: var(--primary-color)"
+                >0</span
+              >
+            </a>
+            <div class="relative">
+              <button
+                id="settings-toggle-btn"
+                class="p-2 hover:bg-black/5 rounded-full transition"
+                aria-label="Compte"
+              >
+                <i
+                  class="fas fa-user-circle text-lg"
+                  style="color: var(--text-color)"
+                ></i>
+              </button>
+              <div id="settings-menu" class="hidden absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-xl z-50 overflow-hidden" style="background-color: var(--card-bg-color); border: 1px solid var(--card-border-color);">
+  <div class="py-1">
+
+    <!-- LE BOUTON D'INSTALLATION, DÉSACTIVÉ PAR DÉFAUT -->
+    <button 
+      id="install-app-btn" 
+      class="w-full text-left px-4 py-2 text-sm zflex-link opacity-50 cursor-not-allowed"
+      data-analytics-type="click_install_app" data-analytics-payload="{}"
+      disabled>
+      <i class="fas fa-download mr-2"></i>Installer l'Application
+    </button>
+    
+    <!-- LE MESSAGE DE SUCCÈS, CACHÉ PAR DÉFAUT -->
+    <div id="app-installed-message" class="hidden px-4 py-2 text-sm text-green-500 font-semibold">
+        <i class="fas fa-check-circle mr-2"></i>Application Installée
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  
+  <template data-zflex-variant="header.default">
+    <nav class="w-full px-6 py-4 bg-white border-b" style="background-color: var(--bg-color); border-color: var(--card-border-color);">
+      <div class="container mx-auto flex items-center justify-between">
+        <div class="flex-shrink-0"><span class="text-2xl font-bold tracking-tighter" style="color: var(--text-color)">Store Name</span></div>
+        <div class="hidden md:flex items-center space-x-10">
+          <span class="text-sm font-bold uppercase tracking-widest" style="color: var(--text-color)">Navigation...</span>
+        </div>
+        <div class="flex items-center space-x-6"><i class="fas fa-shopping-bag text-lg" style="color: var(--text-color)"></i></div>
+      </div>
+    </nav>
+  </template>
+
+  <template data-zflex-variant="header.transparent">
+    <nav class="w-full px-6 py-4 fixed top-0 left-0 right-0 bg-transparent text-white z-50">
+      <div class="container mx-auto flex items-center justify-between">
+        <div class="flex-shrink-0"><span class="text-2xl font-bold tracking-tighter">Store Name</span></div>
+        <div class="hidden md:flex items-center space-x-10">
+          <span class="text-sm font-bold uppercase tracking-widest text-white">Navigation...</span>
+        </div>
+        <div class="flex items-center space-x-6"><i class="fas fa-shopping-bag text-lg text-white"></i></div>
+      </div>
+    </nav>
+  </template>
+</header>
+
+
+    <main id="app-content" class="flex-grow" data-page-title="Kwetu Furniture de démonstration 1 - Kwetu Furniture">
+      
+      <!-- ================================================================================================
+// FRAGMENT : product-detail.njk - V6.9 (GRID AVEC GALLERIE MOBILE EN BAS)
+// ================================================================================================ -->
+ 
+
+<main id="product-gallery" data-page-type="product-detail" data-page-title="Kwetu Furniture de démonstration 1 - Kwetu Furniture">
+  <script class="zflex-fragment-data" type="application/json">{"page":{"url":"/products/kwetu-furniture-de-dmonstration-1/"},"storeId":"dzGhaxygHI3wcv3RnNNk","theme":{"themeId":"crystal","headerVariant":"transparent","productCardVariant":"minimal","version":"1.3.0","manifestUpdatedAt":{"_seconds":1770026940,"_nanoseconds":302000000},"checksum":"bd71f85b0cfb9eddc2ad4cb28bec1dbf124ff1c6e59e8a2a5c4f2efd7e1063ca","manifest":{"settingsSchema":[{"type":"group","label":"Ordre des Sections (Layout)","fields":[{"id":"homePageSections","label":"Séquence de la Page","type":"repeater","itemFields":[{"id":"type","label":"Type de section","type":"select","options":[{"value":"hero","label":"1. Hero (Intro Impact)"},{"value":"painPoints","label":"2. Pain Points (Problématique)"},{"value":"featuredProduct","label":"3. Spotlight Product (Un seul)"},{"value":"featuredProducts","label":"4. Featured Products (Grille)"},{"value":"features","label":"5. Store Features (Atouts)"},{"value":"productsByCategory","label":"6. Category Switcher (Collections)"},{"value":"promoBanner","label":"7. Promo Banner (Offre Spéciale)"},{"value":"testimonials","label":"8. Testimonials (Preuve Sociale)"},{"value":"faq","label":"9. FAQ (Questions)"},{"value":"about","label":"10. Our Story (À Propos)"},{"value":"newsletterSignup","label":"11. Newsletter (Engagement)"}]}]}]},{"type":"group","label":"1. Hero (L'Impact)","fields":[{"id":"hero.style","label":"Style du Hero","type":"variant_selector","variantId":"hero","default":"image"},{"id":"hero.title","label":"Titre Principal","type":"text","default":"Votre Titre Principal"},{"id":"hero.subtitle","label":"Sous-titre / Accroche","type":"textarea","default":"Une brève description de votre activité ou de votre proposition de valeur."},{"id":"hero.imageUrl","label":"Image de fond","type":"image","default":""},{"id":"hero.ctaButtonText","label":"Texte du bouton","type":"text","default":"Explorer"},{"id":"hero.ctaButtonUrl","label":"Lien du bouton","type":"select","options":[{"value":"/","label":"Accueil"},{"value":"/catalog","label":"Catalogue"},{"value":"/cart","label":"Panier"},{"value":"#featuredProducts","label":"Ancre: Produits Vedettes"},{"value":"#featuredProduct","label":"Ancre: Produit Vedette"},{"value":"#productsByCategory","label":"Ancre: Catégories"},{"value":"#features","label":"Ancre: Avantages"},{"value":"#testimonials","label":"Ancre: Témoignages"},{"value":"#faq","label":"Ancre: FAQ"},{"value":"#about","label":"Ancre: Notre Histoire"}],"default":"#featuredProducts"}]},{"type":"group","label":"2. Pain Points (Le Problème)","fields":[{"id":"painPoints.title","label":"Titre","type":"text","default":"Problématique Client"},{"id":"painPoints.subtitle","label":"Sous-titre","type":"textarea","default":"Décrivez ici les défis majeurs rencontrés par vos clients."},{"id":"painPoints.items","label":"Problèmes","type":"repeater","default":[{"icon":"fas fa-ban","text":"Point de douleur 1"},{"icon":"fas fa-search","text":"Point de douleur 2"},{"icon":"fas fa-dollar-sign","text":"Point de douleur 3"}],"itemFields":[{"id":"icon","label":"Icône (FontAwesome)","type":"text"},{"id":"text","label":"Description","type":"textarea"}]}]},{"type":"group","label":"3. Spotlight Product (Seul)","fields":[{"id":"featuredProduct.title","label":"Titre Alternatif","type":"text"},{"id":"featuredProduct.productId","label":"Sélectionner le Produit Star","type":"product_selector"}]},{"type":"group","label":"4. Featured Products (Liste)","fields":[{"id":"featuredProducts.title","label":"Titre du Bloc","type":"text","default":"Collection Vedette"},{"id":"featuredProducts.subtitle","label":"Sous-titre / Introduction","type":"textarea"},{"id":"featuredProducts.productIds","label":"Sélection des Produits","type":"products_selector"}]},{"type":"group","label":"5. Store Features (Atouts)","fields":[{"id":"features.title","label":"Titre","type":"text","default":"Fonctionnalités Clés"},{"id":"features.subtitle","label":"Sous-titre","type":"textarea","default":"Mettez en avant les points forts de votre produit ou service."},{"id":"features.items","label":"Points forts","type":"repeater","itemFields":[{"id":"title","label":"Nom de l'atout","type":"text"},{"id":"description","label":"Détails","type":"textarea"},{"id":"image","label":"Image illustrative","type":"image"}],"default":[{"title":"Avantage 1","description":"Description détaillée de cet avantage concurrentiel.","image":""},{"title":"Avantage 2","description":"Description détaillée de ce second avantage.","image":""}]}]},{"type":"group","label":"6. Category Switcher","fields":[{"id":"productsByCategory.style","label":"Mode d'affichage","type":"variant_selector","variantId":"productsByCategory"},{"id":"productsByCategory.title","label":"Titre de section","type":"text"}]},{"type":"group","label":"7. Promotion & Offre","fields":[{"id":"promo.style","label":"Style d'affichage","type":"variant_selector","variantId":"promo","default":"standard"},{"id":"promo.title","label":"Titre","type":"text","default":"Offre Spéciale"},{"id":"promo.subtitle","label":"Sous-titre","type":"text","default":"Détails de votre offre promotionnelle à durée limitée."},{"id":"promo.endDate","label":"Date de fin (YYYY-MM-DD HH:MM)","type":"text","default":"2026-12-31 23:59"},{"id":"promo.buttonText","label":"Texte Bouton","type":"text","default":"Profiter"},{"id":"promo.buttonUrl","label":"Lien Promotion","type":"select","options":[{"value":"/catalog","label":"Catalogue"},{"value":"#featuredProducts","label":"Ancre: Produits Vedettes"},{"value":"#","label":"Haut de page"}],"default":"#featuredProducts"}]},{"type":"group","label":"8. Témoignages Clients","fields":[{"id":"testimonials.style","label":"Style d'affichage","type":"variant_selector","variantId":"testimonials","default":"carousel"},{"id":"testimonials.title","label":"Titre de la Section","type":"text","default":"Témoignages Clients"},{"id":"testimonials.items","label":"Avis Clients","type":"repeater","itemFields":[{"id":"name","label":"Nom de l'auteur","type":"text"},{"id":"quote","label":"Message","type":"textarea"}],"default":[{"name":"Client","quote":"Message de satisfaction client."}]}]},{"type":"group","label":"9. FAQ (Questions)","fields":[{"id":"faq.title","label":"Titre FAQ","type":"text","default":"Questions Fréquentes"},{"id":"faq.items","label":"Questions / Réponses","type":"repeater","itemFields":[{"id":"question","label":"La Question","type":"text"},{"id":"answer","label":"La Réponse","type":"textarea"}],"default":[{"question":"Question ?","answer":"Réponse."}]}]},{"type":"group","label":"10. Notre Histoire (À Propos)","fields":[{"id":"about.title","label":"Titre","type":"text","default":"Notre Histoire"},{"id":"about.content","label":"Texte principal","type":"textarea"},{"id":"about.engagements","label":"Engagements & Valeurs","type":"repeater","itemFields":[{"id":"title","label":"Titre","type":"text"},{"id":"description","label":"Description","type":"textarea"},{"id":"icon","label":"Icône","type":"text"}]}]},{"type":"group","label":"11. Newsletter (Capture)","fields":[{"id":"newsletterSignup.style","label":"Style d'affichage","type":"variant_selector","variantId":"newsletterSignup","default":"modern"},{"id":"newsletterSignup.title","label":"Titre d'Incitation","type":"text","default":"Rejoignez-nous"},{"id":"newsletterSignup.subtitle","label":"Argument de vente","type":"text"}]},{"type":"group","label":"Branding & Couleurs","fields":[{"id":"palette.background","label":"Couleur de Fond","type":"color"},{"id":"palette.text","label":"Couleur du Texte","type":"color"},{"id":"palette.textMuted","label":"Texte Secondaire","type":"color"},{"id":"palette.primary","label":"Couleur Primaire","type":"color"},{"id":"palette.secondary","label":"Couleur Secondaire","type":"color"},{"id":"palette.accent","label":"Couleur d'Accent","type":"color"},{"id":"palette.cardBackground","label":"Fond des Cartes","type":"color"},{"id":"palette.cardBorder","label":"Bordures des Cartes","type":"color"}]},{"type":"group","label":"Styles UI Globaux","fields":[{"id":"header.style","label":"Variante Header","type":"variant_selector","variantId":"header"},{"id":"productCard.style","label":"Variante Cartes Produit","type":"variant_selector","variantId":"productCard"}]}],"author":"zFlex Vandal Architect","magicSuggestions":[{"label":"✨ Mode Catalogue","prompt":"Organise ma boutique pour mettre mes catégories en avant avec un défilement fluide, parfait pour parcourir toute ma collection en un clin d'œil."},{"label":"💎 Épure Luxe","prompt":"Crée une ambiance de bijouterie haut de gamme : beaucoup d'espace, un fond d'un blanc pur et un design de carte produit minimaliste qui sublime mes créations."},{"label":"📈 Mur de Confiance","prompt":"Affiche fièrement la satisfaction de mes clients avec une grille d'avis massive juste sous mes produits phares pour transformer chaque visiteur en acheteur."},{"label":"⚡ Look Immersion","prompt":"Donne un aspect moderne et épuré en faisant fondre mon menu dans une grande image d'accueil plein écran pour une première impression mémorable."},{"label":"🛍️ Parcours Zen","prompt":"Rends l'expérience d'achat ultra-directe en allant droit à l'essentiel : une belle intro, mon produit star et une offre promotionnelle percutante."}],"name":"Crystal","description":"Une philosophie de clarté et de modularité. Idéal pour les catalogues produits riches et les marques qui privilégient une expérience utilisateur directe et élégante. Supporte désormais le storytelling narratif complet.","variants":{"productCard":[{"id":"classic","label":"Classique","description":"Carte traditionnelle avec bordures et fond distinct."},{"id":"minimal","label":"Minimaliste","description":"Design épuré, sans bordures, centré sur l'image."}],"promo":[{"id":"standard","label":"Standard (Clean)","description":"Bannière promo classique et élégante."},{"id":"timer","label":"Urgence (Timer)","description":"Ajoute un compte à rebours pour maximiser la pression."}],"newsletterSignup":[{"id":"modern","label":"Moderne (Capsule)","description":"Formulaire arrondi type 'pilule' avec ombre portée."},{"id":"minimal","label":"Minimaliste (Centré)","description":"Champs classiques soulignés ou simples, centrés."}],"testimonials":[{"id":"carousel","label":"Carrousel","description":"Défilement horizontal fluide."},{"id":"grid","label":"Grille (Wall)","description":"Mosaïque d'avis pour preuve sociale massive."}],"header":[{"id":"default","label":"Défaut (Gauche)","description":"Logo à gauche, liens et panier à droite."},{"id":"transparent","label":"Transparent","description":"Header superposé sur la bannière Hero."}],"hero":[{"id":"image","label":"Image de fond","description":"Un grand visuel avec un titre en superposition."},{"id":"gradient","label":"Dégradé de couleurs","description":"Un fond dynamique basé sur la palette du thème."},{"id":"minimal","label":"Minimaliste","description":"Un simple titre sur un fond uni."}],"productsByCategory":[{"id":"list","label":"Liste Verticale","description":"Toutes les catégories se suivent."},{"id":"carousel","label":"Le Switcher (Carrousel)","description":"Navigation horizontale entre catégories avec grid dynamique."}]},"version":"1.3.0"},"variants":{"productCard":[{"id":"classic","label":"Classique","description":"Carte traditionnelle avec bordures et fond distinct."},{"id":"minimal","label":"Minimaliste","description":"Design épuré, sans bordures, centré sur l'image."}],"promo":[{"id":"standard","label":"Standard (Clean)","description":"Bannière promo classique et élégante."},{"id":"timer","label":"Urgence (Timer)","description":"Ajoute un compte à rebours pour maximiser la pression."}],"newsletterSignup":[{"id":"modern","label":"Moderne (Capsule)","description":"Formulaire arrondi type 'pilule' avec ombre portée."},{"id":"minimal","label":"Minimaliste (Centré)","description":"Champs classiques soulignés ou simples, centrés."}],"testimonials":[{"id":"carousel","label":"Carrousel","description":"Défilement horizontal fluide."},{"id":"grid","label":"Grille (Wall)","description":"Mosaïque d'avis pour preuve sociale massive."}],"header":[{"id":"default","label":"Défaut (Gauche)","description":"Logo à gauche, liens et panier à droite."},{"id":"transparent","label":"Transparent","description":"Header superposé sur la bannière Hero."}],"hero":[{"id":"image","label":"Image de fond","description":"Un grand visuel avec un titre en superposition."},{"id":"gradient","label":"Dégradé de couleurs","description":"Un fond dynamique basé sur la palette du thème."},{"id":"minimal","label":"Minimaliste","description":"Un simple titre sur un fond uni."}],"productsByCategory":[{"id":"list","label":"Liste Verticale","description":"Toutes les catégories se suivent."},{"id":"carousel","label":"Le Switcher (Carrousel)","description":"Navigation horizontale entre catégories avec grid dynamique."}]},"settingsSchema":[{"type":"group","label":"Ordre des Sections (Layout)","fields":[{"id":"homePageSections","label":"Séquence de la Page","type":"repeater","itemFields":[{"id":"type","label":"Type de section","type":"select","options":[{"value":"hero","label":"1. Hero (Intro Impact)"},{"value":"painPoints","label":"2. Pain Points (Problématique)"},{"value":"featuredProduct","label":"3. Spotlight Product (Un seul)"},{"value":"featuredProducts","label":"4. Featured Products (Grille)"},{"value":"features","label":"5. Store Features (Atouts)"},{"value":"productsByCategory","label":"6. Category Switcher (Collections)"},{"value":"promoBanner","label":"7. Promo Banner (Offre Spéciale)"},{"value":"testimonials","label":"8. Testimonials (Preuve Sociale)"},{"value":"faq","label":"9. FAQ (Questions)"},{"value":"about","label":"10. Our Story (À Propos)"},{"value":"newsletterSignup","label":"11. Newsletter (Engagement)"}]}]}]},{"type":"group","label":"1. Hero (L'Impact)","fields":[{"id":"hero.style","label":"Style du Hero","type":"variant_selector","variantId":"hero","default":"image"},{"id":"hero.title","label":"Titre Principal","type":"text","default":"Votre Titre Principal"},{"id":"hero.subtitle","label":"Sous-titre / Accroche","type":"textarea","default":"Une brève description de votre activité ou de votre proposition de valeur."},{"id":"hero.imageUrl","label":"Image de fond","type":"image","default":""},{"id":"hero.ctaButtonText","label":"Texte du bouton","type":"text","default":"Explorer"},{"id":"hero.ctaButtonUrl","label":"Lien du bouton","type":"select","options":[{"value":"/","label":"Accueil"},{"value":"/catalog","label":"Catalogue"},{"value":"/cart","label":"Panier"},{"value":"#featuredProducts","label":"Ancre: Produits Vedettes"},{"value":"#featuredProduct","label":"Ancre: Produit Vedette"},{"value":"#productsByCategory","label":"Ancre: Catégories"},{"value":"#features","label":"Ancre: Avantages"},{"value":"#testimonials","label":"Ancre: Témoignages"},{"value":"#faq","label":"Ancre: FAQ"},{"value":"#about","label":"Ancre: Notre Histoire"}],"default":"#featuredProducts"}]},{"type":"group","label":"2. Pain Points (Le Problème)","fields":[{"id":"painPoints.title","label":"Titre","type":"text","default":"Problématique Client"},{"id":"painPoints.subtitle","label":"Sous-titre","type":"textarea","default":"Décrivez ici les défis majeurs rencontrés par vos clients."},{"id":"painPoints.items","label":"Problèmes","type":"repeater","default":[{"icon":"fas fa-ban","text":"Point de douleur 1"},{"icon":"fas fa-search","text":"Point de douleur 2"},{"icon":"fas fa-dollar-sign","text":"Point de douleur 3"}],"itemFields":[{"id":"icon","label":"Icône (FontAwesome)","type":"text"},{"id":"text","label":"Description","type":"textarea"}]}]},{"type":"group","label":"3. Spotlight Product (Seul)","fields":[{"id":"featuredProduct.title","label":"Titre Alternatif","type":"text"},{"id":"featuredProduct.productId","label":"Sélectionner le Produit Star","type":"product_selector"}]},{"type":"group","label":"4. Featured Products (Liste)","fields":[{"id":"featuredProducts.title","label":"Titre du Bloc","type":"text","default":"Collection Vedette"},{"id":"featuredProducts.subtitle","label":"Sous-titre / Introduction","type":"textarea"},{"id":"featuredProducts.productIds","label":"Sélection des Produits","type":"products_selector"}]},{"type":"group","label":"5. Store Features (Atouts)","fields":[{"id":"features.title","label":"Titre","type":"text","default":"Fonctionnalités Clés"},{"id":"features.subtitle","label":"Sous-titre","type":"textarea","default":"Mettez en avant les points forts de votre produit ou service."},{"id":"features.items","label":"Points forts","type":"repeater","itemFields":[{"id":"title","label":"Nom de l'atout","type":"text"},{"id":"description","label":"Détails","type":"textarea"},{"id":"image","label":"Image illustrative","type":"image"}],"default":[{"title":"Avantage 1","description":"Description détaillée de cet avantage concurrentiel.","image":""},{"title":"Avantage 2","description":"Description détaillée de ce second avantage.","image":""}]}]},{"type":"group","label":"6. Category Switcher","fields":[{"id":"productsByCategory.style","label":"Mode d'affichage","type":"variant_selector","variantId":"productsByCategory"},{"id":"productsByCategory.title","label":"Titre de section","type":"text"}]},{"type":"group","label":"7. Promotion & Offre","fields":[{"id":"promo.style","label":"Style d'affichage","type":"variant_selector","variantId":"promo","default":"standard"},{"id":"promo.title","label":"Titre","type":"text","default":"Offre Spéciale"},{"id":"promo.subtitle","label":"Sous-titre","type":"text","default":"Détails de votre offre promotionnelle à durée limitée."},{"id":"promo.endDate","label":"Date de fin (YYYY-MM-DD HH:MM)","type":"text","default":"2026-12-31 23:59"},{"id":"promo.buttonText","label":"Texte Bouton","type":"text","default":"Profiter"},{"id":"promo.buttonUrl","label":"Lien Promotion","type":"select","options":[{"value":"/catalog","label":"Catalogue"},{"value":"#featuredProducts","label":"Ancre: Produits Vedettes"},{"value":"#","label":"Haut de page"}],"default":"#featuredProducts"}]},{"type":"group","label":"8. Témoignages Clients","fields":[{"id":"testimonials.style","label":"Style d'affichage","type":"variant_selector","variantId":"testimonials","default":"carousel"},{"id":"testimonials.title","label":"Titre de la Section","type":"text","default":"Témoignages Clients"},{"id":"testimonials.items","label":"Avis Clients","type":"repeater","itemFields":[{"id":"name","label":"Nom de l'auteur","type":"text"},{"id":"quote","label":"Message","type":"textarea"}],"default":[{"name":"Client","quote":"Message de satisfaction client."}]}]},{"type":"group","label":"9. FAQ (Questions)","fields":[{"id":"faq.title","label":"Titre FAQ","type":"text","default":"Questions Fréquentes"},{"id":"faq.items","label":"Questions / Réponses","type":"repeater","itemFields":[{"id":"question","label":"La Question","type":"text"},{"id":"answer","label":"La Réponse","type":"textarea"}],"default":[{"question":"Question ?","answer":"Réponse."}]}]},{"type":"group","label":"10. Notre Histoire (À Propos)","fields":[{"id":"about.title","label":"Titre","type":"text","default":"Notre Histoire"},{"id":"about.content","label":"Texte principal","type":"textarea"},{"id":"about.engagements","label":"Engagements & Valeurs","type":"repeater","itemFields":[{"id":"title","label":"Titre","type":"text"},{"id":"description","label":"Description","type":"textarea"},{"id":"icon","label":"Icône","type":"text"}]}]},{"type":"group","label":"11. Newsletter (Capture)","fields":[{"id":"newsletterSignup.style","label":"Style d'affichage","type":"variant_selector","variantId":"newsletterSignup","default":"modern"},{"id":"newsletterSignup.title","label":"Titre d'Incitation","type":"text","default":"Rejoignez-nous"},{"id":"newsletterSignup.subtitle","label":"Argument de vente","type":"text"}]},{"type":"group","label":"Branding & Couleurs","fields":[{"id":"palette.background","label":"Couleur de Fond","type":"color"},{"id":"palette.text","label":"Couleur du Texte","type":"color"},{"id":"palette.textMuted","label":"Texte Secondaire","type":"color"},{"id":"palette.primary","label":"Couleur Primaire","type":"color"},{"id":"palette.secondary","label":"Couleur Secondaire","type":"color"},{"id":"palette.accent","label":"Couleur d'Accent","type":"color"},{"id":"palette.cardBackground","label":"Fond des Cartes","type":"color"},{"id":"palette.cardBorder","label":"Bordures des Cartes","type":"color"}]},{"type":"group","label":"Styles UI Globaux","fields":[{"id":"header.style","label":"Variante Header","type":"variant_selector","variantId":"header"},{"id":"productCard.style","label":"Variante Cartes Produit","type":"variant_selector","variantId":"productCard"}]}],"settings":{"homePageSections":[],"hero":{"style":"image","title":"Votre Titre Principal","subtitle":"Une brève description de votre activité ou de votre proposition de valeur.","imageUrl":"","ctaButtonText":"Explorer","ctaButtonUrl":"#featuredProducts"},"painPoints":{"title":"Problématique Client","subtitle":"Décrivez ici les défis majeurs rencontrés par vos clients."},"painPoints.items":[{"icon":"fas fa-ban","text":"Point de douleur 1"},{"icon":"fas fa-search","text":"Point de douleur 2"},{"icon":"fas fa-dollar-sign","text":"Point de douleur 3"}],"featuredProducts":{"title":"Collection Vedette"},"features":{"title":"Fonctionnalités Clés","subtitle":"Mettez en avant les points forts de votre produit ou service."},"features.items":[{"title":"Avantage 1","description":"Description détaillée de cet avantage concurrentiel.","image":""},{"title":"Avantage 2","description":"Description détaillée de ce second avantage.","image":""}],"promo":{"style":"standard","title":"Offre Spéciale","subtitle":"Détails de votre offre promotionnelle à durée limitée.","endDate":"2026-12-31 23:59","buttonText":"Profiter","buttonUrl":"#featuredProducts"},"testimonials":{"style":"carousel","title":"Témoignages Clients"},"testimonials.items":[{"name":"Client","quote":"Message de satisfaction client."}],"faq":{"title":"Questions Fréquentes"},"faq.items":[{"question":"Question ?","answer":"Réponse."}],"about":{"title":"Notre Histoire"},"about.engagements":[],"newsletterSignup":{"style":"modern","title":"Rejoignez-nous"},"computedPalette":{"background":"#F8F4EA","text":"#332B25","primary":"#C25B44","secondary":"#8B4513","accent":"#DAA520","cardBackground":"#F0E6D2","textMuted":"#a9a49b","cardBorder":"#d9d0bd","inputBackground":"#f4ecdd","chatResponseBackground":"#fbf8f2","primary600":"#a74b36","primary700":"#90412f","secondary600":"#70380f"},"computedCssVars":"--bg-color: #F8F4EA;\n  --text-color: #332B25;\n  --primary-color: #C25B44;\n  --secondary-color: #8B4513;\n  --accent-color: #DAA520;\n  --text-muted-color: #a9a49b;\n  --card-bg-color: #F0E6D2;\n  --card-border-color: #d9d0bd;\n  --input-bg-color: #f4ecdd;\n  --chat-response-bg-color: #fbf8f2;\n  --primary-600: #a74b36;\n  --primary-700: #90412f;\n  --secondary-600: #70380f;\n  --contrast-text-bg: 12.636703341749499;"},"baseTemplate":"crystal"},"apiEndpoints":{"stacy":"https://us-central1-zflex-wizard.cloudfunctions.net/askStacyApi","resumeConv":"https://us-central1-zflex-wizard.cloudfunctions.net/resumeConversationApi","createConv":"https://us-central1-zflex-wizard.cloudfunctions.net/createConversationApi","continueConv":"https://us-central1-zflex-wizard.cloudfunctions.net/continueConversationApi","createOrder":"https://us-central1-zflex-wizard.cloudfunctions.net/createOrderApi","subscribeToNewsletter":"https://us-central1-zflex-wizard.cloudfunctions.net/subscribeToNewsletterApi","submitReview":"https://us-central1-zflex-wizard.cloudfunctions.net/submitReviewApi","getOrderDetails":"https://us-central1-zflex-wizard.cloudfunctions.net/getOrderApi","trackEvent":"https://us-central1-zflex-wizard.cloudfunctions.net/tracker","initiatePayment":"https://us-central1-zflex-wizard.cloudfunctions.net/initiatePayment","getOrderStatusApi":"https://us-central1-zflex-wizard.cloudfunctions.net/getOrderStatusApi","getProspectInfo":"https://us-central1-zflex-wizard.cloudfunctions.net/getProspectInfo"},"product":{"id":"VCZjUOsB2XvT3ArMOTAA","title":"Kwetu Furniture de démonstration 1"}}</script>
+
+  <section class="py-12 md:py-20" style="background-color: var(--bg-color, #fff);">
+    <div class="container mx-auto px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+        <!-- === Colonne 1 : Galerie (1 col sur 12 en desktop, sous l'image en mobile) === -->
+        <div class="lg:col-span-1 order-2 lg:order-1 mt-4 lg:mt-0">
+          
+          
+            <div class="grid grid-cols-5 lg:grid-cols-1 gap-2 mt-4 lg:mt-0">
+              
+                <div class="gallery-thumbnail aspect-square rounded-md overflow-hidden cursor-pointer hover:ring-2 ring-offset-2" style="border-color: var(--primary-color);" data-image-src="https://placehold.co/800x600?text=Kwetu%20Furniture%20de%20d%C3%A9monstration%201">
+                  <img src="https://placehold.co/800x600?text=Kwetu%20Furniture%20de%20d%C3%A9monstration%201" alt="Image principale" class="w-full h-full object-cover" loading="lazy">
+                </div>
+              
+              
+                
+                  <div class="gallery-thumbnail aspect-square rounded-md overflow-hidden cursor-pointer hover:ring-2 ring-offset-2" style="border-color: var(--primary-color);" data-image-src="https://placehold.co/800x600?text=Kwetu%20Furniture%20de%20d%C3%A9monstration%201">
+                    <img src="https://placehold.co/800x600?text=Kwetu%20Furniture%20de%20d%C3%A9monstration%201" alt="Image miniature" class="w-full h-full object-cover" loading="lazy">
+                  </div>
+                
+              
+            </div>
+          
+        </div>
+
+        <!-- === Colonne 2 : Image Principale (6 col sur 12 en desktop, premier bloc sur mobile) === -->
+        <div class="lg:col-span-6 order-1 lg:order-2 aspect-square rounded-lg overflow-hidden shadow-lg" style="border: 1px solid var(--card-border-color, #E5E7EB);">
+          
+          <img id="main-product-image" src="https://placehold.co/800x600?text=Kwetu%20Furniture%20de%20d%C3%A9monstration%201" alt="Kwetu Furniture de démonstration 1" class="w-full h-full object-cover" loading="lazy">
+          
+        </div>
+
+        <!-- === Colonne 3 : Infos & Actions (5 col sur 12 en desktop, en dernier sur mobile) === -->
+        <div class="lg:col-span-5 order-3 lg:order-3">
+          
+
+          <h1 class="text-3xl md:text-4xl font-bold mb-2" style="color: var(--text-color);">Kwetu Furniture de démonstration 1</h1>
+          <p class="text-3xl font-bold mb-6" style="color: var(--primary-color);" aria-label="Prix du produit">Prix non disponible</p>
+
+          <div class="prose max-w-none mb-8" style="color: var(--text-muted-color);">Kwetu Furniture crée un artisanat moderne aux couleurs chaudes, offrant une ambiance accueillante et stylée. Découvrez des pièces uniques qui transformeront votre intérieur avec passion et perfection. Contactez-nous à kwetufurniture72@gmail.com pour un espace qui vous ressemble.</div>
+
+          <div class="mt-8 p-4 rounded-lg" style="background-color: var(--card-bg-color); border: 1px solid var(--card-border-color);" aria-live="polite">
+            
+              
+              <button
+                id="add-to-cart-btn"
+                class="btn-primary w-full bg-primary text-white text-lg font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity"
+                data-analytics-type="add_to_cart" data-analytics-payload="{&quot;productId&quot;:&quot;VCZjUOsB2XvT3ArMOTAA&quot;,&quot;title&quot;:&quot;Kwetu Furniture de démonstration 1&quot;}"
+              >
+                Ajouter au Panier
+              </button>
+            
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- === Section Recommandations === -->
+  
+  <section class="py-12 md:py-20" style="background-color: var(--card-bg-color, #f9fafb);">
+    <div class="container mx-auto px-6">
+      <h2 id="recommend-title" class="text-2xl font-bold mb-8 text-center">Vous aimerez aussi</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" aria-labelledby="recommend-title">
+        
+          <!-- =================================================================================================
+// PARTIEL : _product-card.njk - V6.5 (PREVIEW BLUEPRINTS FIX)
+// ================================================================================================= -->
+
+
+ 
+
+
+
+<div class="product-card group">
+  <a
+    href="/products/kwetu-furniture-de-dmonstration-3/"
+    class="block zflex-link"
+    title="Kwetu Furniture de démonstration 3"
+    data-analytics-type="view_item" data-analytics-payload="{&quot;productId&quot;:&quot;VKrP0XyUh0q40INoUePS&quot;,&quot;title&quot;:&quot;Kwetu Furniture de démonstration 3&quot;}"
+  >
+    <div class="relative overflow-hidden aspect-square" style="background-color: #f3f4f6;">
+      
+        <img 
+          src="https://placehold.co/800x600?text=Kwetu%20Furniture%20de%20d%C3%A9monstration%203" 
+          alt="Kwetu Furniture de démonstration 3" 
+          loading="lazy" 
+          class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        >
+      
+      <div class="absolute top-2 left-2 flex flex-col gap-y-2">
+        
+      </div>
+    </div>
+    <div class="pt-3">
+      <h4 class="font-semibold truncate" style="color: var(--text-color, #111);">Kwetu Furniture de démonstration 3</h4>
+      <p class="font-bold product-price" style="color: var(--primary-color, #000);">Prix non disponible</p>
+    </div>
+  </a>
+</div>
+
+
+
+
+        
+          <!-- =================================================================================================
+// PARTIEL : _product-card.njk - V6.5 (PREVIEW BLUEPRINTS FIX)
+// ================================================================================================= -->
+
+
+ 
+
+
+
+<div class="product-card group">
+  <a
+    href="/products/kwetu-furniture-de-dmonstration-4/"
+    class="block zflex-link"
+    title="Kwetu Furniture de démonstration 4"
+    data-analytics-type="view_item" data-analytics-payload="{&quot;productId&quot;:&quot;b17O0SF0aaOkswIyiYP1&quot;,&quot;title&quot;:&quot;Kwetu Furniture de démonstration 4&quot;}"
+  >
+    <div class="relative overflow-hidden aspect-square" style="background-color: #f3f4f6;">
+      
+        <img 
+          src="https://placehold.co/800x600?text=Kwetu%20Furniture%20de%20d%C3%A9monstration%204" 
+          alt="Kwetu Furniture de démonstration 4" 
+          loading="lazy" 
+          class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        >
+      
+      <div class="absolute top-2 left-2 flex flex-col gap-y-2">
+        
+      </div>
+    </div>
+    <div class="pt-3">
+      <h4 class="font-semibold truncate" style="color: var(--text-color, #111);">Kwetu Furniture de démonstration 4</h4>
+      <p class="font-bold product-price" style="color: var(--primary-color, #000);">Prix non disponible</p>
+    </div>
+  </a>
+</div>
+
+
+
+
+        
+      </div>
+    </div>
+  </section>
+  
+</main>
+
+    </main>
+
+    <!-- =================================================================================================
+// PARTIEL : _footer.njk - V6.3 (FULLY DYNAMIC & BULLETPROOF)
+// CHANGES:
+// - Les colonnes et les liens sont maintenant 100% pilotés par la config du thème.
+// - Fallbacks PARTOUT pour un affichage robuste en toutes circonstances.
+// - Nettoyage de la syntaxe et des conditions.
+// ================================================================================================= -->
+
+<footer class="py-16" style="background-color: var(--card-bg-color, #f9fafb); border-top: 1px solid var(--card-border-color, #E5E7EB);">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      
+      
+      
+      
+
+      
+      <div>
+        <p class="text-lg font-semibold mb-4" style="color: var(--text-color);" data-zflex-bind="title">Kwetu Furniture</p>
+        
+        
+        
+          <p class="text-sm" style="color: var(--text-muted-color);" data-zflex-id="about.content">Chez Kwetu Furniture, nous transformons le bois en œuvres d&#39;art fonctionnelles. Chaque pièce est le fruit d&#39;un savoir-faire artisanal méticuleux, conçue pour apporter chaleur, modernité et caractère à votre intérieur. &#39;Votre intérieur notre passion parfaitement façonner&#39; n&#39;est pas seulement un slogan, c&#39;est notre promesse de qualité et de design.</p>
+        
+        
+        
+      </div>
+      
+      <div>
+        <p class="text-lg font-semibold mb-4" style="color: var(--text-color);" data-zflex-bind="title">Explorer</p>
+        
+        
+        
+          
+          
+          <ul class="space-y-2" data-zflex-repeater="footer.links">
+            
+            
+            
+            
+          </ul>
+        
+        
+        
+      </div>
+      
+      <div>
+        <p class="text-lg font-semibold mb-4" style="color: var(--text-color);" data-zflex-bind="title">Contact</p>
+        
+        
+        
+          <ul class="space-y-2 text-sm" style="color: var(--text-muted-color);">
+            
+            
+            <li class="flex items-start"><i class="fas fa-envelope w-4 pt-1 mr-2"></i><span>kwetufurniture72@gmail.com</span></li>
+          </ul>
+
+        
+        
+      </div>
+      
+      <div>
+        <p class="text-lg font-semibold mb-4" style="color: var(--text-color);" data-zflex-bind="title">Suivez-nous</p>
+        
+        
+        
+      </div>
+      
+    </div>
+
+    <div class="border-t mt-12 pt-8 text-center text-sm" style="border-color: var(--card-border-color, #E5E7EB); color: var(--text-muted-color);">
+      <p>© 2026 Kwetu Furniture. Tous droits réservés.</p>
+      <p class="mt-2">
+        Site propulsé par
+        <a href="https://zflex.dev" target="_blank" rel="noopener noreferrer" class="font-semibold underline" style="color: var(--primary-color, #000);">zFlex</a>
+        
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<template data-zflex-template="footer.links">
+  <li><a href="#" class="zflex-link text-sm hover:text-primary transition-colors" style="color: var(--text-muted-color);" data-zflex-bind="label">Lien</a></li>
+</template> 
+
+
+
+
+
+<div data-stacy-fab class="fixed bottom-6 right-6 z-[1000]">
+  <button
+    type="button"
+    data-stacy-fab-button
+    aria-expanded="false"
+    aria-controls="stacy-window"
+    aria-label="Ouvrir le chat avec Stacy"
+    class="w-16 h-16 rounded-full shadow-lg flex items-center justify-center transform transition-all duration-300 hover:scale-110 focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/50"
+    style="background-color: var(--primary-color); color: var(--fab-foreground, #fff);"
+    data-analytics-type="open_chat" data-analytics-payload="{}"
+  >
+    <svg data-stacy-icon="chat" class="w-8 h-8 transition-opacity duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 5.523-4.477 10-10 10S1 17.523 1 12 5.477 2 11 2s10 4.477 10 10z"/>
+    </svg>
+    <svg data-stacy-icon="close" class="w-8 h-8 absolute transition-opacity duration-300 opacity-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+    </svg>
+  </button>
+</div>
+
+
+<div
+  id="stacy-window"
+  data-stacy-window
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="stacy-title"
+  class="hidden fixed bottom-24 right-6 z-[999] w-80 max-w-[95vw] h-[32rem] max-h-[75vh] rounded-xl shadow-2xl flex flex-col"
+  style="background-color: var(--card-bg-color); border: 1px solid var(--card-border-color);"
+>
+  <header class="p-4 border-b flex items-center gap-4" style="border-color: var(--card-border-color);">
+    <div class="relative flex-shrink-0">
+      
+        <div class="w-10 h-10 rounded-full" style="color: var(--muted-text-color);">
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="48" stroke="currentColor" stroke-width="4"/>
+  <path d="M62 35C62 41.6274 56.6274 47 50 47C43.3726 47 38 41.6274 38 35C38 28.3726 43.3726 23 50 23C56.6274 23 62 28.3726 62 35Z" stroke="currentColor" stroke-width="4"/>
+  <path d="M29 82C29 70.402 38.402 61 50 61C61.598 61 71 70.402 71 82" stroke="currentColor" stroke-width="4"/>
+</svg>
+</div>
+      
+      <div class="absolute bottom-0 right-0 w-3 h-3 rounded-full border-2" style="background-color: #2ecc71; border-color: var(--card-bg-color);" title="En ligne"></div>
+    </div>
+    <div class="flex-1 min-w-0">
+      <h3 id="stacy-title" class="font-bold text-base truncate" style="color: var(--text-color);">
+        Stacy
+      </h3>
+      <p class="text-xs truncate" style="color: var(--muted-text-color);">
+        Assistante virtuelle
+      </p>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <!-- Delete / reset conversation -->
+      <button
+        type="button"
+        data-stacy-delete
+        title="Supprimer la conversation et en créer une nouvelle"
+        class="p-2 rounded-md hover:bg-gray-100 focus:outline-none"
+        style="color: var(--muted-text-color);"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3"/></svg>
+      </button>
+
+      <!-- Small actions placeholder (future) -->
+      <button
+        type="button"
+        data-stacy-compact
+        title="Options"
+        class="p-2 rounded-md hover:bg-gray-100 focus:outline-none"
+        style="color: var(--muted-text-color);"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v.01M12 12v.01M12 18v.01"/></svg>
+      </button>
+    </div>
+  </header>
+
+
+  <div data-stacy-messages class="flex-1 p-4 overflow-y-auto flex flex-col gap-3" role="log" aria-live="polite"></div>
+
+  <footer class="p-3 border-t" style="border-color: var(--card-border-color);">
+    <form data-stacy-form class="flex items-start gap-2" aria-label="Formulaire de chat">
+      <label for="stacy-input" class="sr-only">Votre message</label>
+      <textarea
+        id="stacy-input"
+        data-stacy-input
+        rows="1"
+        placeholder="Posez votre question..."
+        class="flex-grow resize-none bg-transparent focus:outline-none p-2 text-sm w-full transition-all"
+        style="color: var(--text-color); min-height: 40px; max-height: 120px;"
+      ></textarea>
+      <button
+        type="submit"
+        data-stacy-send
+        class="p-2 rounded-full hover:bg-primary/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 self-end"
+        aria-label="Envoyer"
+        style="color: var(--primary-color);"
+        data-analytics-type="send_stacy_message" data-analytics-payload="{}"
+      >
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </button>
+    </form>
+  </footer>
+</div> <!-- =================================================================================================
+// PARTIEL : _dialog.njk - V2.0 (ICON READY)
+// ================================================================================================= -->
+<div
+  id="zflex-dialog"
+  class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden"
+>
+  <div
+    id="dialog-overlay"
+    class="fixed inset-0 bg-black/60 backdrop-blur-sm"
+  ></div>
+  <div
+    id="dialog-content"
+    class="relative z-10 w-full max-w-sm rounded-lg shadow-2xl p-6 text-center"
+    style="background-color: var(--card-bg-color)"
+  >
+    <!-- Icône (change selon la variante) -->
+    <div
+      id="dialog-icon-success"
+      class="hidden mx-auto mb-4 w-12 h-12 rounded-full bg-green-100 flex items-center justify-center"
+    >
+      <svg
+        class="w-8 h-8 text-green-600"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 12.75l6 6 9-13.5"
+        />
+      </svg>
+    </div>
+    <div
+      id="dialog-icon-error"
+      class="hidden mx-auto mb-4 w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"
+    >
+      <svg
+        class="w-8 h-8 text-red-600"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+        />
+      </svg>
+    </div>
+    <div
+      id="dialog-icon-info"
+      class="hidden mx-auto mb-4 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center"
+    >
+      <svg
+        class="w-8 h-8 text-blue-600"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+        />
+      </svg>
+    </div>
+
+    <h3
+      id="dialog-title"
+      class="text-xl font-bold mb-2"
+      style="color: var(--text-color)"
+    ></h3>
+    <p
+      id="dialog-message"
+      class="mb-6"
+      style="color: var(--text-muted-color)"
+    ></p>
+
+    <div class="flex justify-center gap-3">
+      <button
+        id="dialog-cancel-btn"
+        class="hidden bg-white border border-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition"
+      >
+        Annuler
+      </button>
+      <button
+        id="dialog-confirm-btn"
+        class="bg-primary text-white font-bold py-2 px-6 rounded-lg hover:opacity-90 transition"
+      >
+        OK
+      </button>
+    </div>
+  </div>
+</div>
+ <!-- =================================================================================================
+// PARTIEL : _unsplash-dialog.njk - V1.0 (GALERIE DE CRÉDITS)
+// ================================================================================================= -->
+
+
+
+    <script id="zflex-data" type="application/json">
+      
+      {"page":{"url":"/products/kwetu-furniture-de-dmonstration-1/"},"storeId":"dzGhaxygHI3wcv3RnNNk","theme":{"themeId":"crystal","headerVariant":"transparent","productCardVariant":"minimal","version":"1.3.0","manifestUpdatedAt":{"_seconds":1770026940,"_nanoseconds":302000000},"checksum":"bd71f85b0cfb9eddc2ad4cb28bec1dbf124ff1c6e59e8a2a5c4f2efd7e1063ca","manifest":{"settingsSchema":[{"type":"group","label":"Ordre des Sections (Layout)","fields":[{"id":"homePageSections","label":"Séquence de la Page","type":"repeater","itemFields":[{"id":"type","label":"Type de section","type":"select","options":[{"value":"hero","label":"1. Hero (Intro Impact)"},{"value":"painPoints","label":"2. Pain Points (Problématique)"},{"value":"featuredProduct","label":"3. Spotlight Product (Un seul)"},{"value":"featuredProducts","label":"4. Featured Products (Grille)"},{"value":"features","label":"5. Store Features (Atouts)"},{"value":"productsByCategory","label":"6. Category Switcher (Collections)"},{"value":"promoBanner","label":"7. Promo Banner (Offre Spéciale)"},{"value":"testimonials","label":"8. Testimonials (Preuve Sociale)"},{"value":"faq","label":"9. FAQ (Questions)"},{"value":"about","label":"10. Our Story (À Propos)"},{"value":"newsletterSignup","label":"11. Newsletter (Engagement)"}]}]}]},{"type":"group","label":"1. Hero (L'Impact)","fields":[{"id":"hero.style","label":"Style du Hero","type":"variant_selector","variantId":"hero","default":"image"},{"id":"hero.title","label":"Titre Principal","type":"text","default":"Votre Titre Principal"},{"id":"hero.subtitle","label":"Sous-titre / Accroche","type":"textarea","default":"Une brève description de votre activité ou de votre proposition de valeur."},{"id":"hero.imageUrl","label":"Image de fond","type":"image","default":""},{"id":"hero.ctaButtonText","label":"Texte du bouton","type":"text","default":"Explorer"},{"id":"hero.ctaButtonUrl","label":"Lien du bouton","type":"select","options":[{"value":"/","label":"Accueil"},{"value":"/catalog","label":"Catalogue"},{"value":"/cart","label":"Panier"},{"value":"#featuredProducts","label":"Ancre: Produits Vedettes"},{"value":"#featuredProduct","label":"Ancre: Produit Vedette"},{"value":"#productsByCategory","label":"Ancre: Catégories"},{"value":"#features","label":"Ancre: Avantages"},{"value":"#testimonials","label":"Ancre: Témoignages"},{"value":"#faq","label":"Ancre: FAQ"},{"value":"#about","label":"Ancre: Notre Histoire"}],"default":"#featuredProducts"}]},{"type":"group","label":"2. Pain Points (Le Problème)","fields":[{"id":"painPoints.title","label":"Titre","type":"text","default":"Problématique Client"},{"id":"painPoints.subtitle","label":"Sous-titre","type":"textarea","default":"Décrivez ici les défis majeurs rencontrés par vos clients."},{"id":"painPoints.items","label":"Problèmes","type":"repeater","default":[{"icon":"fas fa-ban","text":"Point de douleur 1"},{"icon":"fas fa-search","text":"Point de douleur 2"},{"icon":"fas fa-dollar-sign","text":"Point de douleur 3"}],"itemFields":[{"id":"icon","label":"Icône (FontAwesome)","type":"text"},{"id":"text","label":"Description","type":"textarea"}]}]},{"type":"group","label":"3. Spotlight Product (Seul)","fields":[{"id":"featuredProduct.title","label":"Titre Alternatif","type":"text"},{"id":"featuredProduct.productId","label":"Sélectionner le Produit Star","type":"product_selector"}]},{"type":"group","label":"4. Featured Products (Liste)","fields":[{"id":"featuredProducts.title","label":"Titre du Bloc","type":"text","default":"Collection Vedette"},{"id":"featuredProducts.subtitle","label":"Sous-titre / Introduction","type":"textarea"},{"id":"featuredProducts.productIds","label":"Sélection des Produits","type":"products_selector"}]},{"type":"group","label":"5. Store Features (Atouts)","fields":[{"id":"features.title","label":"Titre","type":"text","default":"Fonctionnalités Clés"},{"id":"features.subtitle","label":"Sous-titre","type":"textarea","default":"Mettez en avant les points forts de votre produit ou service."},{"id":"features.items","label":"Points forts","type":"repeater","itemFields":[{"id":"title","label":"Nom de l'atout","type":"text"},{"id":"description","label":"Détails","type":"textarea"},{"id":"image","label":"Image illustrative","type":"image"}],"default":[{"title":"Avantage 1","description":"Description détaillée de cet avantage concurrentiel.","image":""},{"title":"Avantage 2","description":"Description détaillée de ce second avantage.","image":""}]}]},{"type":"group","label":"6. Category Switcher","fields":[{"id":"productsByCategory.style","label":"Mode d'affichage","type":"variant_selector","variantId":"productsByCategory"},{"id":"productsByCategory.title","label":"Titre de section","type":"text"}]},{"type":"group","label":"7. Promotion & Offre","fields":[{"id":"promo.style","label":"Style d'affichage","type":"variant_selector","variantId":"promo","default":"standard"},{"id":"promo.title","label":"Titre","type":"text","default":"Offre Spéciale"},{"id":"promo.subtitle","label":"Sous-titre","type":"text","default":"Détails de votre offre promotionnelle à durée limitée."},{"id":"promo.endDate","label":"Date de fin (YYYY-MM-DD HH:MM)","type":"text","default":"2026-12-31 23:59"},{"id":"promo.buttonText","label":"Texte Bouton","type":"text","default":"Profiter"},{"id":"promo.buttonUrl","label":"Lien Promotion","type":"select","options":[{"value":"/catalog","label":"Catalogue"},{"value":"#featuredProducts","label":"Ancre: Produits Vedettes"},{"value":"#","label":"Haut de page"}],"default":"#featuredProducts"}]},{"type":"group","label":"8. Témoignages Clients","fields":[{"id":"testimonials.style","label":"Style d'affichage","type":"variant_selector","variantId":"testimonials","default":"carousel"},{"id":"testimonials.title","label":"Titre de la Section","type":"text","default":"Témoignages Clients"},{"id":"testimonials.items","label":"Avis Clients","type":"repeater","itemFields":[{"id":"name","label":"Nom de l'auteur","type":"text"},{"id":"quote","label":"Message","type":"textarea"}],"default":[{"name":"Client","quote":"Message de satisfaction client."}]}]},{"type":"group","label":"9. FAQ (Questions)","fields":[{"id":"faq.title","label":"Titre FAQ","type":"text","default":"Questions Fréquentes"},{"id":"faq.items","label":"Questions / Réponses","type":"repeater","itemFields":[{"id":"question","label":"La Question","type":"text"},{"id":"answer","label":"La Réponse","type":"textarea"}],"default":[{"question":"Question ?","answer":"Réponse."}]}]},{"type":"group","label":"10. Notre Histoire (À Propos)","fields":[{"id":"about.title","label":"Titre","type":"text","default":"Notre Histoire"},{"id":"about.content","label":"Texte principal","type":"textarea"},{"id":"about.engagements","label":"Engagements & Valeurs","type":"repeater","itemFields":[{"id":"title","label":"Titre","type":"text"},{"id":"description","label":"Description","type":"textarea"},{"id":"icon","label":"Icône","type":"text"}]}]},{"type":"group","label":"11. Newsletter (Capture)","fields":[{"id":"newsletterSignup.style","label":"Style d'affichage","type":"variant_selector","variantId":"newsletterSignup","default":"modern"},{"id":"newsletterSignup.title","label":"Titre d'Incitation","type":"text","default":"Rejoignez-nous"},{"id":"newsletterSignup.subtitle","label":"Argument de vente","type":"text"}]},{"type":"group","label":"Branding & Couleurs","fields":[{"id":"palette.background","label":"Couleur de Fond","type":"color"},{"id":"palette.text","label":"Couleur du Texte","type":"color"},{"id":"palette.textMuted","label":"Texte Secondaire","type":"color"},{"id":"palette.primary","label":"Couleur Primaire","type":"color"},{"id":"palette.secondary","label":"Couleur Secondaire","type":"color"},{"id":"palette.accent","label":"Couleur d'Accent","type":"color"},{"id":"palette.cardBackground","label":"Fond des Cartes","type":"color"},{"id":"palette.cardBorder","label":"Bordures des Cartes","type":"color"}]},{"type":"group","label":"Styles UI Globaux","fields":[{"id":"header.style","label":"Variante Header","type":"variant_selector","variantId":"header"},{"id":"productCard.style","label":"Variante Cartes Produit","type":"variant_selector","variantId":"productCard"}]}],"author":"zFlex Vandal Architect","magicSuggestions":[{"label":"✨ Mode Catalogue","prompt":"Organise ma boutique pour mettre mes catégories en avant avec un défilement fluide, parfait pour parcourir toute ma collection en un clin d'œil."},{"label":"💎 Épure Luxe","prompt":"Crée une ambiance de bijouterie haut de gamme : beaucoup d'espace, un fond d'un blanc pur et un design de carte produit minimaliste qui sublime mes créations."},{"label":"📈 Mur de Confiance","prompt":"Affiche fièrement la satisfaction de mes clients avec une grille d'avis massive juste sous mes produits phares pour transformer chaque visiteur en acheteur."},{"label":"⚡ Look Immersion","prompt":"Donne un aspect moderne et épuré en faisant fondre mon menu dans une grande image d'accueil plein écran pour une première impression mémorable."},{"label":"🛍️ Parcours Zen","prompt":"Rends l'expérience d'achat ultra-directe en allant droit à l'essentiel : une belle intro, mon produit star et une offre promotionnelle percutante."}],"name":"Crystal","description":"Une philosophie de clarté et de modularité. Idéal pour les catalogues produits riches et les marques qui privilégient une expérience utilisateur directe et élégante. Supporte désormais le storytelling narratif complet.","variants":{"productCard":[{"id":"classic","label":"Classique","description":"Carte traditionnelle avec bordures et fond distinct."},{"id":"minimal","label":"Minimaliste","description":"Design épuré, sans bordures, centré sur l'image."}],"promo":[{"id":"standard","label":"Standard (Clean)","description":"Bannière promo classique et élégante."},{"id":"timer","label":"Urgence (Timer)","description":"Ajoute un compte à rebours pour maximiser la pression."}],"newsletterSignup":[{"id":"modern","label":"Moderne (Capsule)","description":"Formulaire arrondi type 'pilule' avec ombre portée."},{"id":"minimal","label":"Minimaliste (Centré)","description":"Champs classiques soulignés ou simples, centrés."}],"testimonials":[{"id":"carousel","label":"Carrousel","description":"Défilement horizontal fluide."},{"id":"grid","label":"Grille (Wall)","description":"Mosaïque d'avis pour preuve sociale massive."}],"header":[{"id":"default","label":"Défaut (Gauche)","description":"Logo à gauche, liens et panier à droite."},{"id":"transparent","label":"Transparent","description":"Header superposé sur la bannière Hero."}],"hero":[{"id":"image","label":"Image de fond","description":"Un grand visuel avec un titre en superposition."},{"id":"gradient","label":"Dégradé de couleurs","description":"Un fond dynamique basé sur la palette du thème."},{"id":"minimal","label":"Minimaliste","description":"Un simple titre sur un fond uni."}],"productsByCategory":[{"id":"list","label":"Liste Verticale","description":"Toutes les catégories se suivent."},{"id":"carousel","label":"Le Switcher (Carrousel)","description":"Navigation horizontale entre catégories avec grid dynamique."}]},"version":"1.3.0"},"variants":{"productCard":[{"id":"classic","label":"Classique","description":"Carte traditionnelle avec bordures et fond distinct."},{"id":"minimal","label":"Minimaliste","description":"Design épuré, sans bordures, centré sur l'image."}],"promo":[{"id":"standard","label":"Standard (Clean)","description":"Bannière promo classique et élégante."},{"id":"timer","label":"Urgence (Timer)","description":"Ajoute un compte à rebours pour maximiser la pression."}],"newsletterSignup":[{"id":"modern","label":"Moderne (Capsule)","description":"Formulaire arrondi type 'pilule' avec ombre portée."},{"id":"minimal","label":"Minimaliste (Centré)","description":"Champs classiques soulignés ou simples, centrés."}],"testimonials":[{"id":"carousel","label":"Carrousel","description":"Défilement horizontal fluide."},{"id":"grid","label":"Grille (Wall)","description":"Mosaïque d'avis pour preuve sociale massive."}],"header":[{"id":"default","label":"Défaut (Gauche)","description":"Logo à gauche, liens et panier à droite."},{"id":"transparent","label":"Transparent","description":"Header superposé sur la bannière Hero."}],"hero":[{"id":"image","label":"Image de fond","description":"Un grand visuel avec un titre en superposition."},{"id":"gradient","label":"Dégradé de couleurs","description":"Un fond dynamique basé sur la palette du thème."},{"id":"minimal","label":"Minimaliste","description":"Un simple titre sur un fond uni."}],"productsByCategory":[{"id":"list","label":"Liste Verticale","description":"Toutes les catégories se suivent."},{"id":"carousel","label":"Le Switcher (Carrousel)","description":"Navigation horizontale entre catégories avec grid dynamique."}]},"settingsSchema":[{"type":"group","label":"Ordre des Sections (Layout)","fields":[{"id":"homePageSections","label":"Séquence de la Page","type":"repeater","itemFields":[{"id":"type","label":"Type de section","type":"select","options":[{"value":"hero","label":"1. Hero (Intro Impact)"},{"value":"painPoints","label":"2. Pain Points (Problématique)"},{"value":"featuredProduct","label":"3. Spotlight Product (Un seul)"},{"value":"featuredProducts","label":"4. Featured Products (Grille)"},{"value":"features","label":"5. Store Features (Atouts)"},{"value":"productsByCategory","label":"6. Category Switcher (Collections)"},{"value":"promoBanner","label":"7. Promo Banner (Offre Spéciale)"},{"value":"testimonials","label":"8. Testimonials (Preuve Sociale)"},{"value":"faq","label":"9. FAQ (Questions)"},{"value":"about","label":"10. Our Story (À Propos)"},{"value":"newsletterSignup","label":"11. Newsletter (Engagement)"}]}]}]},{"type":"group","label":"1. Hero (L'Impact)","fields":[{"id":"hero.style","label":"Style du Hero","type":"variant_selector","variantId":"hero","default":"image"},{"id":"hero.title","label":"Titre Principal","type":"text","default":"Votre Titre Principal"},{"id":"hero.subtitle","label":"Sous-titre / Accroche","type":"textarea","default":"Une brève description de votre activité ou de votre proposition de valeur."},{"id":"hero.imageUrl","label":"Image de fond","type":"image","default":""},{"id":"hero.ctaButtonText","label":"Texte du bouton","type":"text","default":"Explorer"},{"id":"hero.ctaButtonUrl","label":"Lien du bouton","type":"select","options":[{"value":"/","label":"Accueil"},{"value":"/catalog","label":"Catalogue"},{"value":"/cart","label":"Panier"},{"value":"#featuredProducts","label":"Ancre: Produits Vedettes"},{"value":"#featuredProduct","label":"Ancre: Produit Vedette"},{"value":"#productsByCategory","label":"Ancre: Catégories"},{"value":"#features","label":"Ancre: Avantages"},{"value":"#testimonials","label":"Ancre: Témoignages"},{"value":"#faq","label":"Ancre: FAQ"},{"value":"#about","label":"Ancre: Notre Histoire"}],"default":"#featuredProducts"}]},{"type":"group","label":"2. Pain Points (Le Problème)","fields":[{"id":"painPoints.title","label":"Titre","type":"text","default":"Problématique Client"},{"id":"painPoints.subtitle","label":"Sous-titre","type":"textarea","default":"Décrivez ici les défis majeurs rencontrés par vos clients."},{"id":"painPoints.items","label":"Problèmes","type":"repeater","default":[{"icon":"fas fa-ban","text":"Point de douleur 1"},{"icon":"fas fa-search","text":"Point de douleur 2"},{"icon":"fas fa-dollar-sign","text":"Point de douleur 3"}],"itemFields":[{"id":"icon","label":"Icône (FontAwesome)","type":"text"},{"id":"text","label":"Description","type":"textarea"}]}]},{"type":"group","label":"3. Spotlight Product (Seul)","fields":[{"id":"featuredProduct.title","label":"Titre Alternatif","type":"text"},{"id":"featuredProduct.productId","label":"Sélectionner le Produit Star","type":"product_selector"}]},{"type":"group","label":"4. Featured Products (Liste)","fields":[{"id":"featuredProducts.title","label":"Titre du Bloc","type":"text","default":"Collection Vedette"},{"id":"featuredProducts.subtitle","label":"Sous-titre / Introduction","type":"textarea"},{"id":"featuredProducts.productIds","label":"Sélection des Produits","type":"products_selector"}]},{"type":"group","label":"5. Store Features (Atouts)","fields":[{"id":"features.title","label":"Titre","type":"text","default":"Fonctionnalités Clés"},{"id":"features.subtitle","label":"Sous-titre","type":"textarea","default":"Mettez en avant les points forts de votre produit ou service."},{"id":"features.items","label":"Points forts","type":"repeater","itemFields":[{"id":"title","label":"Nom de l'atout","type":"text"},{"id":"description","label":"Détails","type":"textarea"},{"id":"image","label":"Image illustrative","type":"image"}],"default":[{"title":"Avantage 1","description":"Description détaillée de cet avantage concurrentiel.","image":""},{"title":"Avantage 2","description":"Description détaillée de ce second avantage.","image":""}]}]},{"type":"group","label":"6. Category Switcher","fields":[{"id":"productsByCategory.style","label":"Mode d'affichage","type":"variant_selector","variantId":"productsByCategory"},{"id":"productsByCategory.title","label":"Titre de section","type":"text"}]},{"type":"group","label":"7. Promotion & Offre","fields":[{"id":"promo.style","label":"Style d'affichage","type":"variant_selector","variantId":"promo","default":"standard"},{"id":"promo.title","label":"Titre","type":"text","default":"Offre Spéciale"},{"id":"promo.subtitle","label":"Sous-titre","type":"text","default":"Détails de votre offre promotionnelle à durée limitée."},{"id":"promo.endDate","label":"Date de fin (YYYY-MM-DD HH:MM)","type":"text","default":"2026-12-31 23:59"},{"id":"promo.buttonText","label":"Texte Bouton","type":"text","default":"Profiter"},{"id":"promo.buttonUrl","label":"Lien Promotion","type":"select","options":[{"value":"/catalog","label":"Catalogue"},{"value":"#featuredProducts","label":"Ancre: Produits Vedettes"},{"value":"#","label":"Haut de page"}],"default":"#featuredProducts"}]},{"type":"group","label":"8. Témoignages Clients","fields":[{"id":"testimonials.style","label":"Style d'affichage","type":"variant_selector","variantId":"testimonials","default":"carousel"},{"id":"testimonials.title","label":"Titre de la Section","type":"text","default":"Témoignages Clients"},{"id":"testimonials.items","label":"Avis Clients","type":"repeater","itemFields":[{"id":"name","label":"Nom de l'auteur","type":"text"},{"id":"quote","label":"Message","type":"textarea"}],"default":[{"name":"Client","quote":"Message de satisfaction client."}]}]},{"type":"group","label":"9. FAQ (Questions)","fields":[{"id":"faq.title","label":"Titre FAQ","type":"text","default":"Questions Fréquentes"},{"id":"faq.items","label":"Questions / Réponses","type":"repeater","itemFields":[{"id":"question","label":"La Question","type":"text"},{"id":"answer","label":"La Réponse","type":"textarea"}],"default":[{"question":"Question ?","answer":"Réponse."}]}]},{"type":"group","label":"10. Notre Histoire (À Propos)","fields":[{"id":"about.title","label":"Titre","type":"text","default":"Notre Histoire"},{"id":"about.content","label":"Texte principal","type":"textarea"},{"id":"about.engagements","label":"Engagements & Valeurs","type":"repeater","itemFields":[{"id":"title","label":"Titre","type":"text"},{"id":"description","label":"Description","type":"textarea"},{"id":"icon","label":"Icône","type":"text"}]}]},{"type":"group","label":"11. Newsletter (Capture)","fields":[{"id":"newsletterSignup.style","label":"Style d'affichage","type":"variant_selector","variantId":"newsletterSignup","default":"modern"},{"id":"newsletterSignup.title","label":"Titre d'Incitation","type":"text","default":"Rejoignez-nous"},{"id":"newsletterSignup.subtitle","label":"Argument de vente","type":"text"}]},{"type":"group","label":"Branding & Couleurs","fields":[{"id":"palette.background","label":"Couleur de Fond","type":"color"},{"id":"palette.text","label":"Couleur du Texte","type":"color"},{"id":"palette.textMuted","label":"Texte Secondaire","type":"color"},{"id":"palette.primary","label":"Couleur Primaire","type":"color"},{"id":"palette.secondary","label":"Couleur Secondaire","type":"color"},{"id":"palette.accent","label":"Couleur d'Accent","type":"color"},{"id":"palette.cardBackground","label":"Fond des Cartes","type":"color"},{"id":"palette.cardBorder","label":"Bordures des Cartes","type":"color"}]},{"type":"group","label":"Styles UI Globaux","fields":[{"id":"header.style","label":"Variante Header","type":"variant_selector","variantId":"header"},{"id":"productCard.style","label":"Variante Cartes Produit","type":"variant_selector","variantId":"productCard"}]}],"settings":{"homePageSections":[],"hero":{"style":"image","title":"Votre Titre Principal","subtitle":"Une brève description de votre activité ou de votre proposition de valeur.","imageUrl":"","ctaButtonText":"Explorer","ctaButtonUrl":"#featuredProducts"},"painPoints":{"title":"Problématique Client","subtitle":"Décrivez ici les défis majeurs rencontrés par vos clients."},"painPoints.items":[{"icon":"fas fa-ban","text":"Point de douleur 1"},{"icon":"fas fa-search","text":"Point de douleur 2"},{"icon":"fas fa-dollar-sign","text":"Point de douleur 3"}],"featuredProducts":{"title":"Collection Vedette"},"features":{"title":"Fonctionnalités Clés","subtitle":"Mettez en avant les points forts de votre produit ou service."},"features.items":[{"title":"Avantage 1","description":"Description détaillée de cet avantage concurrentiel.","image":""},{"title":"Avantage 2","description":"Description détaillée de ce second avantage.","image":""}],"promo":{"style":"standard","title":"Offre Spéciale","subtitle":"Détails de votre offre promotionnelle à durée limitée.","endDate":"2026-12-31 23:59","buttonText":"Profiter","buttonUrl":"#featuredProducts"},"testimonials":{"style":"carousel","title":"Témoignages Clients"},"testimonials.items":[{"name":"Client","quote":"Message de satisfaction client."}],"faq":{"title":"Questions Fréquentes"},"faq.items":[{"question":"Question ?","answer":"Réponse."}],"about":{"title":"Notre Histoire"},"about.engagements":[],"newsletterSignup":{"style":"modern","title":"Rejoignez-nous"},"computedPalette":{"background":"#F8F4EA","text":"#332B25","primary":"#C25B44","secondary":"#8B4513","accent":"#DAA520","cardBackground":"#F0E6D2","textMuted":"#a9a49b","cardBorder":"#d9d0bd","inputBackground":"#f4ecdd","chatResponseBackground":"#fbf8f2","primary600":"#a74b36","primary700":"#90412f","secondary600":"#70380f"},"computedCssVars":"--bg-color: #F8F4EA;\n  --text-color: #332B25;\n  --primary-color: #C25B44;\n  --secondary-color: #8B4513;\n  --accent-color: #DAA520;\n  --text-muted-color: #a9a49b;\n  --card-bg-color: #F0E6D2;\n  --card-border-color: #d9d0bd;\n  --input-bg-color: #f4ecdd;\n  --chat-response-bg-color: #fbf8f2;\n  --primary-600: #a74b36;\n  --primary-700: #90412f;\n  --secondary-600: #70380f;\n  --contrast-text-bg: 12.636703341749499;"},"baseTemplate":"crystal"},"apiEndpoints":{"stacy":"https://us-central1-zflex-wizard.cloudfunctions.net/askStacyApi","resumeConv":"https://us-central1-zflex-wizard.cloudfunctions.net/resumeConversationApi","createConv":"https://us-central1-zflex-wizard.cloudfunctions.net/createConversationApi","continueConv":"https://us-central1-zflex-wizard.cloudfunctions.net/continueConversationApi","createOrder":"https://us-central1-zflex-wizard.cloudfunctions.net/createOrderApi","subscribeToNewsletter":"https://us-central1-zflex-wizard.cloudfunctions.net/subscribeToNewsletterApi","submitReview":"https://us-central1-zflex-wizard.cloudfunctions.net/submitReviewApi","getOrderDetails":"https://us-central1-zflex-wizard.cloudfunctions.net/getOrderApi","trackEvent":"https://us-central1-zflex-wizard.cloudfunctions.net/tracker","initiatePayment":"https://us-central1-zflex-wizard.cloudfunctions.net/initiatePayment","getOrderStatusApi":"https://us-central1-zflex-wizard.cloudfunctions.net/getOrderStatusApi","getProspectInfo":"https://us-central1-zflex-wizard.cloudfunctions.net/getProspectInfo"},"product":{"id":"VCZjUOsB2XvT3ArMOTAA","title":"Kwetu Furniture de démonstration 1"}}
+    </script>
+
+    
+    <div id="zflex-global-blueprints" class="hidden" aria-hidden="true">
+      <template data-zflex-variant="productCard.classic">
+        <div class="product-card rounded-lg overflow-hidden group" style="background-color: var(--card-bg-color, #fff); border: 1px solid var(--card-border-color, #E5E7EB);">
+          <div class="relative overflow-hidden aspect-square">
+            <img src="" loading="lazy" class="product-card-image absolute h-full w-full object-cover" data-zflex-bind="image">
+          </div>
+          <div class="p-4">
+            <h4 class="font-bold text-lg truncate" style="color: var(--text-color, #111);" data-zflex-bind="title">Produit</h4>
+            <div class="flex justify-between items-center mt-2">
+              <span class="text-xl font-bold product-price" style="color: var(--primary-color, #000);" data-zflex-bind="price">0.00 €</span>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <template data-zflex-variant="productCard.minimal">
+        <div class="product-card group">
+          <div class="relative overflow-hidden aspect-square" style="background-color: #f3f4f6;">
+            <img src="" loading="lazy" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" data-zflex-bind="image">
+          </div>
+          <div class="pt-3">
+            <h4 class="font-semibold truncate" style="color: var(--text-color, #111);" data-zflex-bind="title">Nom du produit</h4>
+            <p class="font-bold product-price" style="color: var(--primary-color, #000);" data-zflex-bind="price">0.00 €</p>
+          </div>
+        </div>
+      </template>
+
+      <template data-zflex-template="product.card">
+        <div class="product-card rounded-lg overflow-hidden group" style="background-color: var(--card-bg-color, #fff); border: 1px solid var(--card-border-color, #E5E7EB);">
+          <div class="relative overflow-hidden aspect-square">
+            <img src="" loading="lazy" class="product-card-image absolute h-full w-full object-cover" data-zflex-bind="image">
+          </div>
+          <div class="p-4">
+            <h4 class="font-bold text-lg truncate" style="color: var(--text-color, #111);" data-zflex-bind="title">Produit</h4>
+            <div class="flex justify-between items-center mt-2">
+              <span class="text-xl font-bold product-price" style="color: var(--primary-color, #000);" data-zflex-bind="price">0.00 €</span>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    
+    <script src="/assets/app-BsnYOlrG.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,288 @@
+<!-- functions/templates/crystal/content/checkout.njk -->
+
+<main data-page-type="checkout" data-page-title="Finaliser ma commande - Kwetu Furniture">
+  <script class="zflex-fragment-data" type="application/json">
+    {"page":{"url":"/checkout/"},"storeId":"dzGhaxygHI3wcv3RnNNk","theme":{"themeId":"crystal","headerVariant":"transparent","productCardVariant":"minimal","version":"1.3.0","manifestUpdatedAt":{"_seconds":1770026940,"_nanoseconds":302000000},"checksum":"bd71f85b0cfb9eddc2ad4cb28bec1dbf124ff1c6e59e8a2a5c4f2efd7e1063ca","manifest":{"settingsSchema":[{"type":"group","label":"Ordre des Sections (Layout)","fields":[{"id":"homePageSections","label":"Séquence de la Page","type":"repeater","itemFields":[{"id":"type","label":"Type de section","type":"select","options":[{"value":"hero","label":"1. Hero (Intro Impact)"},{"value":"painPoints","label":"2. Pain Points (Problématique)"},{"value":"featuredProduct","label":"3. Spotlight Product (Un seul)"},{"value":"featuredProducts","label":"4. Featured Products (Grille)"},{"value":"features","label":"5. Store Features (Atouts)"},{"value":"productsByCategory","label":"6. Category Switcher (Collections)"},{"value":"promoBanner","label":"7. Promo Banner (Offre Spéciale)"},{"value":"testimonials","label":"8. Testimonials (Preuve Sociale)"},{"value":"faq","label":"9. FAQ (Questions)"},{"value":"about","label":"10. Our Story (À Propos)"},{"value":"newsletterSignup","label":"11. Newsletter (Engagement)"}]}]}]},{"type":"group","label":"1. Hero (L'Impact)","fields":[{"id":"hero.style","label":"Style du Hero","type":"variant_selector","variantId":"hero","default":"image"},{"id":"hero.title","label":"Titre Principal","type":"text","default":"Votre Titre Principal"},{"id":"hero.subtitle","label":"Sous-titre / Accroche","type":"textarea","default":"Une brève description de votre activité ou de votre proposition de valeur."},{"id":"hero.imageUrl","label":"Image de fond","type":"image","default":""},{"id":"hero.ctaButtonText","label":"Texte du bouton","type":"text","default":"Explorer"},{"id":"hero.ctaButtonUrl","label":"Lien du bouton","type":"select","options":[{"value":"/","label":"Accueil"},{"value":"/catalog","label":"Catalogue"},{"value":"/cart","label":"Panier"},{"value":"#featuredProducts","label":"Ancre: Produits Vedettes"},{"value":"#featuredProduct","label":"Ancre: Produit Vedette"},{"value":"#productsByCategory","label":"Ancre: Catégories"},{"value":"#features","label":"Ancre: Avantages"},{"value":"#testimonials","label":"Ancre: Témoignages"},{"value":"#faq","label":"Ancre: FAQ"},{"value":"#about","label":"Ancre: Notre Histoire"}],"default":"#featuredProducts"}]},{"type":"group","label":"2. Pain Points (Le Problème)","fields":[{"id":"painPoints.title","label":"Titre","type":"text","default":"Problématique Client"},{"id":"painPoints.subtitle","label":"Sous-titre","type":"textarea","default":"Décrivez ici les défis majeurs rencontrés par vos clients."},{"id":"painPoints.items","label":"Problèmes","type":"repeater","default":[{"icon":"fas fa-ban","text":"Point de douleur 1"},{"icon":"fas fa-search","text":"Point de douleur 2"},{"icon":"fas fa-dollar-sign","text":"Point de douleur 3"}],"itemFields":[{"id":"icon","label":"Icône (FontAwesome)","type":"text"},{"id":"text","label":"Description","type":"textarea"}]}]},{"type":"group","label":"3. Spotlight Product (Seul)","fields":[{"id":"featuredProduct.title","label":"Titre Alternatif","type":"text"},{"id":"featuredProduct.productId","label":"Sélectionner le Produit Star","type":"product_selector"}]},{"type":"group","label":"4. Featured Products (Liste)","fields":[{"id":"featuredProducts.title","label":"Titre du Bloc","type":"text","default":"Collection Vedette"},{"id":"featuredProducts.subtitle","label":"Sous-titre / Introduction","type":"textarea"},{"id":"featuredProducts.productIds","label":"Sélection des Produits","type":"products_selector"}]},{"type":"group","label":"5. Store Features (Atouts)","fields":[{"id":"features.title","label":"Titre","type":"text","default":"Fonctionnalités Clés"},{"id":"features.subtitle","label":"Sous-titre","type":"textarea","default":"Mettez en avant les points forts de votre produit ou service."},{"id":"features.items","label":"Points forts","type":"repeater","itemFields":[{"id":"title","label":"Nom de l'atout","type":"text"},{"id":"description","label":"Détails","type":"textarea"},{"id":"image","label":"Image illustrative","type":"image"}],"default":[{"title":"Avantage 1","description":"Description détaillée de cet avantage concurrentiel.","image":""},{"title":"Avantage 2","description":"Description détaillée de ce second avantage.","image":""}]}]},{"type":"group","label":"6. Category Switcher","fields":[{"id":"productsByCategory.style","label":"Mode d'affichage","type":"variant_selector","variantId":"productsByCategory"},{"id":"productsByCategory.title","label":"Titre de section","type":"text"}]},{"type":"group","label":"7. Promotion & Offre","fields":[{"id":"promo.style","label":"Style d'affichage","type":"variant_selector","variantId":"promo","default":"standard"},{"id":"promo.title","label":"Titre","type":"text","default":"Offre Spéciale"},{"id":"promo.subtitle","label":"Sous-titre","type":"text","default":"Détails de votre offre promotionnelle à durée limitée."},{"id":"promo.endDate","label":"Date de fin (YYYY-MM-DD HH:MM)","type":"text","default":"2026-12-31 23:59"},{"id":"promo.buttonText","label":"Texte Bouton","type":"text","default":"Profiter"},{"id":"promo.buttonUrl","label":"Lien Promotion","type":"select","options":[{"value":"/catalog","label":"Catalogue"},{"value":"#featuredProducts","label":"Ancre: Produits Vedettes"},{"value":"#","label":"Haut de page"}],"default":"#featuredProducts"}]},{"type":"group","label":"8. Témoignages Clients","fields":[{"id":"testimonials.style","label":"Style d'affichage","type":"variant_selector","variantId":"testimonials","default":"carousel"},{"id":"testimonials.title","label":"Titre de la Section","type":"text","default":"Témoignages Clients"},{"id":"testimonials.items","label":"Avis Clients","type":"repeater","itemFields":[{"id":"name","label":"Nom de l'auteur","type":"text"},{"id":"quote","label":"Message","type":"textarea"}],"default":[{"name":"Client","quote":"Message de satisfaction client."}]}]},{"type":"group","label":"9. FAQ (Questions)","fields":[{"id":"faq.title","label":"Titre FAQ","type":"text","default":"Questions Fréquentes"},{"id":"faq.items","label":"Questions / Réponses","type":"repeater","itemFields":[{"id":"question","label":"La Question","type":"text"},{"id":"answer","label":"La Réponse","type":"textarea"}],"default":[{"question":"Question ?","answer":"Réponse."}]}]},{"type":"group","label":"10. Notre Histoire (À Propos)","fields":[{"id":"about.title","label":"Titre","type":"text","default":"Notre Histoire"},{"id":"about.content","label":"Texte principal","type":"textarea"},{"id":"about.engagements","label":"Engagements & Valeurs","type":"repeater","itemFields":[{"id":"title","label":"Titre","type":"text"},{"id":"description","label":"Description","type":"textarea"},{"id":"icon","label":"Icône","type":"text"}]}]},{"type":"group","label":"11. Newsletter (Capture)","fields":[{"id":"newsletterSignup.style","label":"Style d'affichage","type":"variant_selector","variantId":"newsletterSignup","default":"modern"},{"id":"newsletterSignup.title","label":"Titre d'Incitation","type":"text","default":"Rejoignez-nous"},{"id":"newsletterSignup.subtitle","label":"Argument de vente","type":"text"}]},{"type":"group","label":"Branding & Couleurs","fields":[{"id":"palette.background","label":"Couleur de Fond","type":"color"},{"id":"palette.text","label":"Couleur du Texte","type":"color"},{"id":"palette.textMuted","label":"Texte Secondaire","type":"color"},{"id":"palette.primary","label":"Couleur Primaire","type":"color"},{"id":"palette.secondary","label":"Couleur Secondaire","type":"color"},{"id":"palette.accent","label":"Couleur d'Accent","type":"color"},{"id":"palette.cardBackground","label":"Fond des Cartes","type":"color"},{"id":"palette.cardBorder","label":"Bordures des Cartes","type":"color"}]},{"type":"group","label":"Styles UI Globaux","fields":[{"id":"header.style","label":"Variante Header","type":"variant_selector","variantId":"header"},{"id":"productCard.style","label":"Variante Cartes Produit","type":"variant_selector","variantId":"productCard"}]}],"author":"zFlex Vandal Architect","magicSuggestions":[{"label":"✨ Mode Catalogue","prompt":"Organise ma boutique pour mettre mes catégories en avant avec un défilement fluide, parfait pour parcourir toute ma collection en un clin d'œil."},{"label":"💎 Épure Luxe","prompt":"Crée une ambiance de bijouterie haut de gamme : beaucoup d'espace, un fond d'un blanc pur et un design de carte produit minimaliste qui sublime mes créations."},{"label":"📈 Mur de Confiance","prompt":"Affiche fièrement la satisfaction de mes clients avec une grille d'avis massive juste sous mes produits phares pour transformer chaque visiteur en acheteur."},{"label":"⚡ Look Immersion","prompt":"Donne un aspect moderne et épuré en faisant fondre mon menu dans une grande image d'accueil plein écran pour une première impression mémorable."},{"label":"🛍️ Parcours Zen","prompt":"Rends l'expérience d'achat ultra-directe en allant droit à l'essentiel : une belle intro, mon produit star et une offre promotionnelle percutante."}],"name":"Crystal","description":"Une philosophie de clarté et de modularité. Idéal pour les catalogues produits riches et les marques qui privilégient une expérience utilisateur directe et élégante. Supporte désormais le storytelling narratif complet.","variants":{"productCard":[{"id":"classic","label":"Classique","description":"Carte traditionnelle avec bordures et fond distinct."},{"id":"minimal","label":"Minimaliste","description":"Design épuré, sans bordures, centré sur l'image."}],"promo":[{"id":"standard","label":"Standard (Clean)","description":"Bannière promo classique et élégante."},{"id":"timer","label":"Urgence (Timer)","description":"Ajoute un compte à rebours pour maximiser la pression."}],"newsletterSignup":[{"id":"modern","label":"Moderne (Capsule)","description":"Formulaire arrondi type 'pilule' avec ombre portée."},{"id":"minimal","label":"Minimaliste (Centré)","description":"Champs classiques soulignés ou simples, centrés."}],"testimonials":[{"id":"carousel","label":"Carrousel","description":"Défilement horizontal fluide."},{"id":"grid","label":"Grille (Wall)","description":"Mosaïque d'avis pour preuve sociale massive."}],"header":[{"id":"default","label":"Défaut (Gauche)","description":"Logo à gauche, liens et panier à droite."},{"id":"transparent","label":"Transparent","description":"Header superposé sur la bannière Hero."}],"hero":[{"id":"image","label":"Image de fond","description":"Un grand visuel avec un titre en superposition."},{"id":"gradient","label":"Dégradé de couleurs","description":"Un fond dynamique basé sur la palette du thème."},{"id":"minimal","label":"Minimaliste","description":"Un simple titre sur un fond uni."}],"productsByCategory":[{"id":"list","label":"Liste Verticale","description":"Toutes les catégories se suivent."},{"id":"carousel","label":"Le Switcher (Carrousel)","description":"Navigation horizontale entre catégories avec grid dynamique."}]},"version":"1.3.0"},"variants":{"productCard":[{"id":"classic","label":"Classique","description":"Carte traditionnelle avec bordures et fond distinct."},{"id":"minimal","label":"Minimaliste","description":"Design épuré, sans bordures, centré sur l'image."}],"promo":[{"id":"standard","label":"Standard (Clean)","description":"Bannière promo classique et élégante."},{"id":"timer","label":"Urgence (Timer)","description":"Ajoute un compte à rebours pour maximiser la pression."}],"newsletterSignup":[{"id":"modern","label":"Moderne (Capsule)","description":"Formulaire arrondi type 'pilule' avec ombre portée."},{"id":"minimal","label":"Minimaliste (Centré)","description":"Champs classiques soulignés ou simples, centrés."}],"testimonials":[{"id":"carousel","label":"Carrousel","description":"Défilement horizontal fluide."},{"id":"grid","label":"Grille (Wall)","description":"Mosaïque d'avis pour preuve sociale massive."}],"header":[{"id":"default","label":"Défaut (Gauche)","description":"Logo à gauche, liens et panier à droite."},{"id":"transparent","label":"Transparent","description":"Header superposé sur la bannière Hero."}],"hero":[{"id":"image","label":"Image de fond","description":"Un grand visuel avec un titre en superposition."},{"id":"gradient","label":"Dégradé de couleurs","description":"Un fond dynamique basé sur la palette du thème."},{"id":"minimal","label":"Minimaliste","description":"Un simple titre sur un fond uni."}],"productsByCategory":[{"id":"list","label":"Liste Verticale","description":"Toutes les catégories se suivent."},{"id":"carousel","label":"Le Switcher (Carrousel)","description":"Navigation horizontale entre catégories avec grid dynamique."}]},"settingsSchema":[{"type":"group","label":"Ordre des Sections (Layout)","fields":[{"id":"homePageSections","label":"Séquence de la Page","type":"repeater","itemFields":[{"id":"type","label":"Type de section","type":"select","options":[{"value":"hero","label":"1. Hero (Intro Impact)"},{"value":"painPoints","label":"2. Pain Points (Problématique)"},{"value":"featuredProduct","label":"3. Spotlight Product (Un seul)"},{"value":"featuredProducts","label":"4. Featured Products (Grille)"},{"value":"features","label":"5. Store Features (Atouts)"},{"value":"productsByCategory","label":"6. Category Switcher (Collections)"},{"value":"promoBanner","label":"7. Promo Banner (Offre Spéciale)"},{"value":"testimonials","label":"8. Testimonials (Preuve Sociale)"},{"value":"faq","label":"9. FAQ (Questions)"},{"value":"about","label":"10. Our Story (À Propos)"},{"value":"newsletterSignup","label":"11. Newsletter (Engagement)"}]}]}]},{"type":"group","label":"1. Hero (L'Impact)","fields":[{"id":"hero.style","label":"Style du Hero","type":"variant_selector","variantId":"hero","default":"image"},{"id":"hero.title","label":"Titre Principal","type":"text","default":"Votre Titre Principal"},{"id":"hero.subtitle","label":"Sous-titre / Accroche","type":"textarea","default":"Une brève description de votre activité ou de votre proposition de valeur."},{"id":"hero.imageUrl","label":"Image de fond","type":"image","default":""},{"id":"hero.ctaButtonText","label":"Texte du bouton","type":"text","default":"Explorer"},{"id":"hero.ctaButtonUrl","label":"Lien du bouton","type":"select","options":[{"value":"/","label":"Accueil"},{"value":"/catalog","label":"Catalogue"},{"value":"/cart","label":"Panier"},{"value":"#featuredProducts","label":"Ancre: Produits Vedettes"},{"value":"#featuredProduct","label":"Ancre: Produit Vedette"},{"value":"#productsByCategory","label":"Ancre: Catégories"},{"value":"#features","label":"Ancre: Avantages"},{"value":"#testimonials","label":"Ancre: Témoignages"},{"value":"#faq","label":"Ancre: FAQ"},{"value":"#about","label":"Ancre: Notre Histoire"}],"default":"#featuredProducts"}]},{"type":"group","label":"2. Pain Points (Le Problème)","fields":[{"id":"painPoints.title","label":"Titre","type":"text","default":"Problématique Client"},{"id":"painPoints.subtitle","label":"Sous-titre","type":"textarea","default":"Décrivez ici les défis majeurs rencontrés par vos clients."},{"id":"painPoints.items","label":"Problèmes","type":"repeater","default":[{"icon":"fas fa-ban","text":"Point de douleur 1"},{"icon":"fas fa-search","text":"Point de douleur 2"},{"icon":"fas fa-dollar-sign","text":"Point de douleur 3"}],"itemFields":[{"id":"icon","label":"Icône (FontAwesome)","type":"text"},{"id":"text","label":"Description","type":"textarea"}]}]},{"type":"group","label":"3. Spotlight Product (Seul)","fields":[{"id":"featuredProduct.title","label":"Titre Alternatif","type":"text"},{"id":"featuredProduct.productId","label":"Sélectionner le Produit Star","type":"product_selector"}]},{"type":"group","label":"4. Featured Products (Liste)","fields":[{"id":"featuredProducts.title","label":"Titre du Bloc","type":"text","default":"Collection Vedette"},{"id":"featuredProducts.subtitle","label":"Sous-titre / Introduction","type":"textarea"},{"id":"featuredProducts.productIds","label":"Sélection des Produits","type":"products_selector"}]},{"type":"group","label":"5. Store Features (Atouts)","fields":[{"id":"features.title","label":"Titre","type":"text","default":"Fonctionnalités Clés"},{"id":"features.subtitle","label":"Sous-titre","type":"textarea","default":"Mettez en avant les points forts de votre produit ou service."},{"id":"features.items","label":"Points forts","type":"repeater","itemFields":[{"id":"title","label":"Nom de l'atout","type":"text"},{"id":"description","label":"Détails","type":"textarea"},{"id":"image","label":"Image illustrative","type":"image"}],"default":[{"title":"Avantage 1","description":"Description détaillée de cet avantage concurrentiel.","image":""},{"title":"Avantage 2","description":"Description détaillée de ce second avantage.","image":""}]}]},{"type":"group","label":"6. Category Switcher","fields":[{"id":"productsByCategory.style","label":"Mode d'affichage","type":"variant_selector","variantId":"productsByCategory"},{"id":"productsByCategory.title","label":"Titre de section","type":"text"}]},{"type":"group","label":"7. Promotion & Offre","fields":[{"id":"promo.style","label":"Style d'affichage","type":"variant_selector","variantId":"promo","default":"standard"},{"id":"promo.title","label":"Titre","type":"text","default":"Offre Spéciale"},{"id":"promo.subtitle","label":"Sous-titre","type":"text","default":"Détails de votre offre promotionnelle à durée limitée."},{"id":"promo.endDate","label":"Date de fin (YYYY-MM-DD HH:MM)","type":"text","default":"2026-12-31 23:59"},{"id":"promo.buttonText","label":"Texte Bouton","type":"text","default":"Profiter"},{"id":"promo.buttonUrl","label":"Lien Promotion","type":"select","options":[{"value":"/catalog","label":"Catalogue"},{"value":"#featuredProducts","label":"Ancre: Produits Vedettes"},{"value":"#","label":"Haut de page"}],"default":"#featuredProducts"}]},{"type":"group","label":"8. Témoignages Clients","fields":[{"id":"testimonials.style","label":"Style d'affichage","type":"variant_selector","variantId":"testimonials","default":"carousel"},{"id":"testimonials.title","label":"Titre de la Section","type":"text","default":"Témoignages Clients"},{"id":"testimonials.items","label":"Avis Clients","type":"repeater","itemFields":[{"id":"name","label":"Nom de l'auteur","type":"text"},{"id":"quote","label":"Message","type":"textarea"}],"default":[{"name":"Client","quote":"Message de satisfaction client."}]}]},{"type":"group","label":"9. FAQ (Questions)","fields":[{"id":"faq.title","label":"Titre FAQ","type":"text","default":"Questions Fréquentes"},{"id":"faq.items","label":"Questions / Réponses","type":"repeater","itemFields":[{"id":"question","label":"La Question","type":"text"},{"id":"answer","label":"La Réponse","type":"textarea"}],"default":[{"question":"Question ?","answer":"Réponse."}]}]},{"type":"group","label":"10. Notre Histoire (À Propos)","fields":[{"id":"about.title","label":"Titre","type":"text","default":"Notre Histoire"},{"id":"about.content","label":"Texte principal","type":"textarea"},{"id":"about.engagements","label":"Engagements & Valeurs","type":"repeater","itemFields":[{"id":"title","label":"Titre","type":"text"},{"id":"description","label":"Description","type":"textarea"},{"id":"icon","label":"Icône","type":"text"}]}]},{"type":"group","label":"11. Newsletter (Capture)","fields":[{"id":"newsletterSignup.style","label":"Style d'affichage","type":"variant_selector","variantId":"newsletterSignup","default":"modern"},{"id":"newsletterSignup.title","label":"Titre d'Incitation","type":"text","default":"Rejoignez-nous"},{"id":"newsletterSignup.subtitle","label":"Argument de vente","type":"text"}]},{"type":"group","label":"Branding & Couleurs","fields":[{"id":"palette.background","label":"Couleur de Fond","type":"color"},{"id":"palette.text","label":"Couleur du Texte","type":"color"},{"id":"palette.textMuted","label":"Texte Secondaire","type":"color"},{"id":"palette.primary","label":"Couleur Primaire","type":"color"},{"id":"palette.secondary","label":"Couleur Secondaire","type":"color"},{"id":"palette.accent","label":"Couleur d'Accent","type":"color"},{"id":"palette.cardBackground","label":"Fond des Cartes","type":"color"},{"id":"palette.cardBorder","label":"Bordures des Cartes","type":"color"}]},{"type":"group","label":"Styles UI Globaux","fields":[{"id":"header.style","label":"Variante Header","type":"variant_selector","variantId":"header"},{"id":"productCard.style","label":"Variante Cartes Produit","type":"variant_selector","variantId":"productCard"}]}],"settings":{"homePageSections":[],"hero":{"style":"image","title":"Votre Titre Principal","subtitle":"Une brève description de votre activité ou de votre proposition de valeur.","imageUrl":"","ctaButtonText":"Explorer","ctaButtonUrl":"#featuredProducts"},"painPoints":{"title":"Problématique Client","subtitle":"Décrivez ici les défis majeurs rencontrés par vos clients."},"painPoints.items":[{"icon":"fas fa-ban","text":"Point de douleur 1"},{"icon":"fas fa-search","text":"Point de douleur 2"},{"icon":"fas fa-dollar-sign","text":"Point de douleur 3"}],"featuredProducts":{"title":"Collection Vedette"},"features":{"title":"Fonctionnalités Clés","subtitle":"Mettez en avant les points forts de votre produit ou service."},"features.items":[{"title":"Avantage 1","description":"Description détaillée de cet avantage concurrentiel.","image":""},{"title":"Avantage 2","description":"Description détaillée de ce second avantage.","image":""}],"promo":{"style":"standard","title":"Offre Spéciale","subtitle":"Détails de votre offre promotionnelle à durée limitée.","endDate":"2026-12-31 23:59","buttonText":"Profiter","buttonUrl":"#featuredProducts"},"testimonials":{"style":"carousel","title":"Témoignages Clients"},"testimonials.items":[{"name":"Client","quote":"Message de satisfaction client."}],"faq":{"title":"Questions Fréquentes"},"faq.items":[{"question":"Question ?","answer":"Réponse."}],"about":{"title":"Notre Histoire"},"about.engagements":[],"newsletterSignup":{"style":"modern","title":"Rejoignez-nous"},"computedPalette":{"background":"#F8F4EA","text":"#332B25","primary":"#C25B44","secondary":"#8B4513","accent":"#DAA520","cardBackground":"#F0E6D2","textMuted":"#a9a49b","cardBorder":"#d9d0bd","inputBackground":"#f4ecdd","chatResponseBackground":"#fbf8f2","primary600":"#a74b36","primary700":"#90412f","secondary600":"#70380f"},"computedCssVars":"--bg-color: #F8F4EA;\n  --text-color: #332B25;\n  --primary-color: #C25B44;\n  --secondary-color: #8B4513;\n  --accent-color: #DAA520;\n  --text-muted-color: #a9a49b;\n  --card-bg-color: #F0E6D2;\n  --card-border-color: #d9d0bd;\n  --input-bg-color: #f4ecdd;\n  --chat-response-bg-color: #fbf8f2;\n  --primary-600: #a74b36;\n  --primary-700: #90412f;\n  --secondary-600: #70380f;\n  --contrast-text-bg: 12.636703341749499;"},"baseTemplate":"crystal"},"apiEndpoints":{"stacy":"https://us-central1-zflex-wizard.cloudfunctions.net/askStacyApi","resumeConv":"https://us-central1-zflex-wizard.cloudfunctions.net/resumeConversationApi","createConv":"https://us-central1-zflex-wizard.cloudfunctions.net/createConversationApi","continueConv":"https://us-central1-zflex-wizard.cloudfunctions.net/continueConversationApi","createOrder":"https://us-central1-zflex-wizard.cloudfunctions.net/createOrderApi","subscribeToNewsletter":"https://us-central1-zflex-wizard.cloudfunctions.net/subscribeToNewsletterApi","submitReview":"https://us-central1-zflex-wizard.cloudfunctions.net/submitReviewApi","getOrderDetails":"https://us-central1-zflex-wizard.cloudfunctions.net/getOrderApi","trackEvent":"https://us-central1-zflex-wizard.cloudfunctions.net/tracker","initiatePayment":"https://us-central1-zflex-wizard.cloudfunctions.net/initiatePayment","getOrderStatusApi":"https://us-central1-zflex-wizard.cloudfunctions.net/getOrderStatusApi","getProspectInfo":"https://us-central1-zflex-wizard.cloudfunctions.net/getProspectInfo"}}
+  </script>
+
+  <section
+    class="py-12 md:py-16"
+    style="background-color: var(--bg-color, #fff)"
+  >
+    <div class="container mx-auto px-6">
+      <div class="text-center">
+        <h1
+          id="checkout-title"
+          class="text-4xl md:text-5xl font-bold transition-all duration-300"
+          style="color: var(--text-color)"
+        >
+          Étape 1: Livraison
+        </h1>
+        <!-- BARRE DE PROGRESSION AMÉLIORÉE -->
+        <div class="max-w-2xl mx-auto mt-6">
+          <div
+            class="w-full bg-gray-200 rounded-full h-3 relative overflow-hidden"
+          >
+            <div
+              id="progress-bar"
+              class="bg-gradient-to-r from-primary to-primary/70 h-3 rounded-full absolute left-0 top-0"
+              style="
+                width: 25%;
+                transition: width 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-8" style="background-color: var(--card-bg-color, #f9fafb)">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+        <!-- === Colonne 1 (Résumé de commande) - À GAUCHE sur desktop === -->
+        <div
+          id="order-summary"
+          class="lg:col-span-2 p-6 rounded-lg"
+          style="
+            background-color: var(--card-bg-color, #fff);
+            border: 1px solid var(--card-border-color, #e5e7eb);
+          "
+        >
+          <h2 class="text-xl font-semibold mb-4">Résumé de votre commande</h2>
+          <div
+            id="summary-items-list"
+            class="space-y-3 border-b pb-4 mb-4"
+            style="border-color: var(--card-border-color)"
+          >
+            <p
+              class="text-sm text-center"
+              style="color: var(--text-muted-color)"
+            >
+              Chargement du résumé...
+            </p>
+          </div>
+          <div class="space-y-2">
+            <div class="flex justify-between">
+              <span style="color: var(--text-muted-color)">Sous-total</span>
+              <span id="summary-subtotal" style="color: var(--text-color)"
+                >...</span
+              >
+            </div>
+            <div class="flex justify-between">
+              <span style="color: var(--text-muted-color)">Livraison</span>
+              <span style="color: var(--text-color)">Gratuite</span>
+            </div>
+          </div>
+          <div
+            class="flex justify-between font-bold text-lg border-t pt-4 mt-4"
+            style="border-color: var(--card-border-color)"
+          >
+            <span>Total</span>
+            <span id="summary-total">...</span>
+          </div>
+        </div>
+
+        <!-- === Colonne 2 (Formulaire multi-étapes) - À DROITE sur desktop === -->
+        <div class="lg:col-span-3">
+          <form id="checkout-form">
+            <!-- === ÉTAPE 1: ADRESSE (Visible par défaut) === -->
+            <div id="step-address" class="space-y-4">
+              <h2 class="text-xl font-semibold">
+                Vos informations de livraison
+              </h2>
+              <div>
+                <label for="name" class="block text-sm font-medium"
+                  >Nom complet</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  class="w-full p-3 rounded-lg border focus:ring-2 focus:ring-primary outline-none"
+                  style="background: var(--input-bg-color); border-color: var(--card-border-color); color: var(--text-color);"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium"
+                  >Adresse e-mail (pour le reçu)</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  class="w-full p-3 rounded-lg border focus:ring-2 focus:ring-primary outline-none"
+                  style="background: var(--input-bg-color); border-color: var(--card-border-color); color: var(--text-color);"
+                />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium"
+                  >Numéro de téléphone</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  autocomplete="tel"
+                  class="w-full p-3 rounded-lg border focus:ring-2 focus:ring-primary outline-none"
+                  style="background: var(--input-bg-color); border-color: var(--card-border-color); color: var(--text-color);"
+                />
+              </div>
+              <div>
+                <label for="address" class="block text-sm font-medium"
+                  >Adresse de livraison</label
+                >
+                <!-- NOUVELLE STRUCTURE POUR L'ICÔNE GÉOLOC -->
+                <div class="relative">
+                  <textarea
+                    id="address"
+                    name="address"
+                    rows="3"
+                    required
+                    autocomplete="street-address"
+                    class="w-full p-3 pr-10 rounded-lg border focus:ring-2 focus:ring-primary outline-none"
+                    style="background: var(--input-bg-color); border-color: var(--card-border-color); color: var(--text-color);"
+                  ></textarea>
+                  <button
+                    type="button"
+                    id="use-geolocation-btn"
+                    title="Utiliser ma position actuelle"
+                    class="absolute top-3 right-3 text-gray-400 hover:text-primary transition-colors"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      ></path>
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <label for="notes" class="block text-sm font-medium"
+                  >Notes (optionnel)</label
+                >
+                <textarea
+                  id="notes"
+                  name="notes"
+                  rows="2"
+                  class="w-full p-3 rounded-lg border focus:ring-2 focus:ring-primary outline-none"
+                  style="background: var(--input-bg-color); border-color: var(--card-border-color); color: var(--text-color);"
+                ></textarea>
+              </div>
+              <button
+                type="button"
+                id="continue-to-payment-btn"
+                class="w-full bg-primary text-white text-lg font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed btn-primary"
+              >
+                Continuer vers le paiement
+              </button>
+            </div>
+
+            <!-- === ÉTAPE 2: PAIEMENT (Cachée par défaut) === -->
+            <div id="step-payment" class="hidden space-y-4">
+              <h2 class="text-xl font-semibold">Informations de paiement</h2>
+
+              <div>
+                <label for="payment-phone" class="block text-sm font-medium"
+                  >Votre numéro de téléphone Mobile Money</label
+                >
+                <div class="relative mt-1">
+                  <div
+                    class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+                  >
+                    <span class="text-gray-500 sm:text-sm">+243</span>
+                  </div>
+                  <input
+                    type="tel"
+                    id="payment-phone"
+                    name="payment_phone"
+                    required
+                    class="w-full p-3 pl-12 rounded-lg border focus:ring-2 focus:ring-primary outline-none"
+                    style="background: var(--input-bg-color); border-color: var(--card-border-color); color: var(--text-color);"
+                    placeholder="812345678"
+                  />
+                  <!-- Le logo de l'opérateur s'affichera ici -->
+                  <div
+                    id="operator-logo-container"
+                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"
+                  >
+                    <!-- Exemple: <img src="/assets/mpesa.png" class="h-6"> -->
+                  </div>
+                </div>
+                <input
+                  type="hidden"
+                  id="selected-payment-method"
+                  name="payment_method"
+                />
+              </div>
+
+              <div
+                id="payment-instructions"
+                class="text-sm text-gray-500 bg-gray-100 p-3 rounded-lg min-h-[60px]"
+              >
+                <p>Veuillez entrer votre numéro pour détecter l'opérateur.</p>
+              </div>
+
+              <button
+                type="submit"
+                id="submit-order-btn"
+                class="w-full bg-primary text-white text-lg font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed btn-primary"
+              >
+                <span class="btn-text">Confirmer et Payer</span>
+                <span
+                  class="btn-spinner hidden ml-2 inline-block"
+                  aria-hidden="true"
+                >
+                  <svg
+                    class="w-5 h-5 animate-spin"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      stroke-opacity="0.2"
+                      stroke-width="4"
+                    ></circle>
+                    <path
+                      d="M22 12a10 10 0 00-10-10"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div
+              id="checkout-error"
+              class="text-red-500 text-sm mt-2 hidden"
+            ></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
